@@ -1,5 +1,4 @@
-# VerifAI TestGuru
-# Explanation for: ariane.sv
+# VerifAI TestGuru Explanation for: ariane.sv
 This is a Verilog code for the top-level module of the Ariane RISC-V processor. 
 It defines a module named "ariane" and imports various packages, 
 including the Ariane package and the CVXIF package. 
