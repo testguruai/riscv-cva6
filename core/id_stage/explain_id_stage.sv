@@ -1,0 +1,9 @@
+# VerifAI TestGuru
+# Explanation for: id_stage.sv
+This is a Verilog module for the instruction decode stage of a RISC-V processor. The functionality of the module includes decoding the instruction, fetching the values of the operands, and preparing the instruction for execution. 
+
+The inputs to the module include the system clock (clk_i) and an active-low reset signal (rst_ni), as well as signals for flushing the pipeline stage (flush_i) and requesting debug information (debug_req_i). The module receives the instruction to be decoded (fetch_entry_i) and a flag indicating whether the instruction is valid or not (fetch_entry_valid_i), and it sends an acknowledgement signal (fetch_entry_ready_o) to the instruction fetch stage. 
+
+The output of the module includes the decoded instruction along with information about whether it is a control flow instruction (issue_entry_o and is_ctrl_flow_o, respectively), as well as a flag indicating whether the instruction is ready for execution (issue_entry_valid_o). The module also handles signals related to the current privilege level of the processor (priv_lvl_i), the floating-point extension status (fs_i), and dynamic rounding mode (frm_i), as well as interrupt requests (irq_i) and interrupt control (irq_ctrl_i). 
+
+The module first checks if the instruction is compressed and expands it if it is. It then decodes the instruction (using a decoder module) and prepares it to be issued for execution. The module uses a pipeline register to handle the forwarding of the decoded instruction to the execution stage, and it includes pipeline registers for buffering the decoded instruction for use in future clock cycles.
