@@ -4,7 +4,6 @@ It defines a module named "ariane" and imports various packages,
 including the Ariane package and the CVXIF package. 
 The module has a number of input and output ports, including clock and 
 reset signals, interrupt inputs, and memory request and response signals. 
-  
 The module instantiates a CVA6 module (a specific implementation of the Ariane processor), 
 and a CVXIF example coprocessor module (if CVXIF is present). 
 The module also defines a parameter ArianeCfg, 
