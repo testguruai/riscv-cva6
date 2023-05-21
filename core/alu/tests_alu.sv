@@ -1,11 +1,7 @@
-# VerifAI TestGuru
-# Explanation for: alu.sv
-# Test Bench and Test Code for ALU in Verilog
-
-The `alu` module is an arithmetic logic unit (ALU) that performs arithmetic and logic operations on two values and returns the result. The module uses RI5CY's ALU as a basis.
-
-The following is the test bench and test code for the ALU module:
-
+# VerifAI TestGuru  Test Bench and Test Code for ALU in Verilog
+# File for: alu.sv 
+The `alu` module is an arithmetic logic unit (ALU) that performs arithmetic 
+and logic operations on two values and returns the result.
 ```verilog
 `timescale 1 ns / 1 ps
 
@@ -14,12 +10,10 @@ module alu_tb();
     logic     clk_i;
     logic     rst_ni;
     fu_data_t fu_data_i;
-
     // Outputs
     riscv::xlen_t result_o;
     logic     alu_branch_res_o;
-
-    // Instantiate the Unit Under Test (UUT)
+    // Instantiate the DUT
     alu dut (
         .clk_i(clk_i),
         .rst_ni(rst_ni),
