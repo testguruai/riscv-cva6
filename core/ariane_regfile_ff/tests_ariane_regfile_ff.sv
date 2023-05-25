@@ -1,101 +1,205 @@
 # VerifAI TestGuru
 # Explanation for: ariane_regfile_ff.sv
-## Test Bench and Test Code for Ariane_Regfile
-The following test bench and test code verifies the functionality of the Ariane_Regfile module for different values of read and write ports. 
+# UVM Test Bench for ariane_regfile
 
-```
-`timescale 1ns / 1ps
-module ariane_regfile_tb();
+The following is a UVM Test Bench for the `ariane_regfile` module. The test bench instantiates an `ariane_regfile` DUT and drives it with various transactions through its `we_i` and `raddr_i` interfaces. The output from the `rdata_o` interface is then compared to the input data for correctness.
 
-  //Parameters
-  localparam NR_READ_PORTS  = 2;
-  localparam NR_WRITE_PORTS = 2;
-  localparam DATA_WIDTH     = 32;
- 
-  // Inputs
-  reg clk_i;
-  reg rst_ni;
-  reg test_en_i;             // disable clock gates for testing
-  reg [NR_READ_PORTS-1:0][4:0] raddr_i;
-  reg [NR_WRITE_PORTS-1:0][4:0] waddr_i;
-  reg [NR_WRITE_PORTS-1:0][DATA_WIDTH-1:0] wdata_i;
-  reg [NR_WRITE_PORTS-1:0] we_i;
+```systemverilog
+`include "uvm_macros.svh"
 
-  // Outputs
-  wire [NR_READ_PORTS-1:0][DATA_WIDTH-1:0] rdata_o;
+module ariane_regfile_tb;
 
-  //Instantiate the Unit Under Test (UUT)
-  ariane_regfile dut (
-    .clk_i(clk_i),
-    .rst_ni(rst_ni),
-    .test_en_i(test_en_i),
-    .raddr_i(raddr_i),
-    .rdata_o(rdata_o),
-    .waddr_i(waddr_i),
-    .wdata_i(wdata_i),
-    .we_i(we_i)
-  );
-  
-  //Clock for TB
+  import uvm_pkg::*;
+
+  `uvm_component_param_utils(ariane_regfile_tb)
+
+  // DUT
+  ariane_regfile #(
+    .DATA_WIDTH(32),
+    .NR_READ_PORTS(2),
+    .NR_WRITE_PORTS(2),
+    .ZERO_REG_ZERO(0)
+  ) dut();
+
+  // UVM Test Bench
   initial begin
-    clk_i = 0;
-    forever #5 clk_i = ~clk_i;
+    uvm_component comp;
+    comp = new("test_bench");
+    ariane_regfile_tb tb;
+    tb = ariane_regfile_tb::type_id::create("tb", comp);
+    tb.dut = dut;
+
+    run_test();
   end
 
-  //Reset for TB
-  initial begin
-    rst_ni = 1;
-    #10 rst_ni = 0;
-    #10 rst_ni = 1;
-  end
+  // UVM Test
+  task run_test();
+    // Create UVM Test
+    uvm_test test = ariane_regfile_test::type_id::create("ariane_regfile_test");
 
-  //Test Cases
-  initial begin
-    //Initialize write and read ports
-    waddr_i[0] = 1; we_i[0] = 1; wdata_i[0] = 924232; //Write data to register 1
-    waddr_i[1] = 2; we_i[1] = 1; wdata_i[1] = 3432; //Write data to register 2
-    raddr_i[0] = 1; raddr_i[1] = 2; //Read the data from register 1 and register 2
-    #20;
-    //Testcase 1
-    //Check for the expected results
-    if(rdata_o[0] == 924232 && rdata_o[1] == 3432) begin
-      $display("Testcase 1 Passed : Read Data : %d %d", rdata_o[0], rdata_o[1]);
-    end
-    else begin
-      $display("Testcase 1 Failed : Read Data : %d %d", rdata_o[0], rdata_o[1]);
-    end
+    // Create UVM Test Sequences
+    ariane_regfile_write_seq wr_seq;
+    ariane_regfile_read_seq rd_seq;
 
-    //Testcase 2
-    //Initialize write and read ports with different values
-    waddr_i[0] = 13; we_i[0] = 1; wdata_i[0] = 100; //Write data to register 13
-    waddr_i[1] = 14; we_i[1] = 1; wdata_i[1] = 200; //Write data to register 14
-    raddr_i[0] = 13; raddr_i[1] = 14; //Read the data from register 13 and register 14
-    #20;
-    //Check for the expected results
-    if(rdata_o[0] == 100 && rdata_o[1] == 200) begin
-      $display("Testcase 2 Passed : Read Data : %d %d", rdata_o[0], rdata_o[1]);
-    end
-    else begin
-      $display("Testcase 2 Failed : Read Data : %d %d", rdata_o[0], rdata_o[1]);
-    end
-    
-    //Testcase 3
-    //Initialize write and read ports with same register value
-    waddr_i[0] = 5; we_i[0] = 1; wdata_i[0] = 1000; //Write data to register 13
-    waddr_i[1] = 5; we_i[1] = 1; wdata_i[1] = 1234; //Write same register with new value
-    raddr_i[0] = 5; raddr_i[1] = 5; //Read the data from register 5
-    #20;
-    //Check for the expected results
-    if(rdata_o[0] == 1234 && rdata_o[1] == 1234) begin
-      $display("Testcase 3 Passed : Read Data : %d %d", rdata_o[0], rdata_o[1]);
-    end
-    else begin
-      $display("Testcase 3 Failed : Read Data : %d %d", rdata_o[0], rdata_o[1]);
-    end 
-    
+    // Add all UVM Test Sequences to UVM Test Case
+    test.add_seq(wr_seq);
+    test.add_seq(rd_seq);
+
+    // Set the UVM Test as the active test
+    uvm_top.print_banner("Starting Test");
+    run_test(test);
   end
 
 endmodule
-
 ```
-We can run this test bench using an EDA tool like Vivado and simulate the functionality of the Ariane_Regfile module. The test bench provides 3 test cases to check the functionality of the module for different combinations of write and read ports. The expected results are printed on the simulation console.
+
+# UVM Test for ariane_regfile
+
+The following is a UVM test case for the `ariane_regfile` DUT. The test case defines a number of test sequences to write and read values to and from the register file. It then checks that the read data matches the expected data.
+
+```systemverilog
+class ariane_regfile_test extends uvm_test;
+
+  `uvm_component_utils(ariane_regfile_test)
+
+  // DUT
+  ariane_regfile #(
+    .DATA_WIDTH(32),
+    .NR_READ_PORTS(2),
+    .NR_WRITE_PORTS(2),
+    .ZERO_REG_ZERO(0)
+  ) dut;
+
+  // Expected data
+  bit [31:0] data[NUM_WORDS];
+
+  virtual function void build_data();
+    data[0] = 32'h00000000;
+    for (int i = 1; i < NUM_WORDS; i++) begin
+      data[i] = $random();
+    end
+  endfunction
+
+  // UVM Test Sequences
+  virtual class ariane_regfile_write_seq extends uvm_sequence #(logic [NR_WRITE_PORTS-1:0][DATA_WIDTH-1:0]);
+    `uvm_object_utils(ariane_regfile_write_seq)
+
+    ariane_regfile #(
+      .DATA_WIDTH(32),
+      .NR_READ_PORTS(2),
+      .NR_WRITE_PORTS(2),
+      .ZERO_REG_ZERO(0)
+    ) dut;
+
+    // Data to be written
+    logic [NR_WRITE_PORTS-1:0][DATA_WIDTH-1:0] data;
+
+    function new(string name="ariane_regfile_write_seq");
+      super.new(name);
+    endfunction
+
+    virtual task body();
+      int unsigned n = 10;
+      for (int i = 0; i < n; i++) begin
+        for (int j = 0; j < NR_WRITE_PORTS; j++) begin
+          data[j] = $cast(dut.mem[i]);
+        end
+        for (int j = 0; j < NR_WRITE_PORTS; j++) begin
+          data[j] = $random();
+          dut.we_dec[j][i] = 1;
+          dut.mem[i] = data[j];
+          @(posedge dut.clk_i);
+          dut.we_dec[j][i] = 0;
+        end
+        `uvm_do_with(data)
+      end
+    endtask
+
+  endclass
+
+  virtual class ariane_regfile_read_seq extends uvm_sequence #(logic [NR_READ_PORTS-1:0][4:0]);
+    `uvm_object_utils(ariane_regfile_read_seq)
+
+    ariane_regfile #(
+      .DATA_WIDTH(32),
+      .NR_READ_PORTS(2),
+      .NR_WRITE_PORTS(2),
+      .ZERO_REG_ZERO(0)
+    ) dut;
+
+    // Addresses to be read
+    logic [NR_READ_PORTS-1:0][4:0] addr;
+
+    function new(string name="ariane_regfile_read_seq");
+      super.new(name);
+    endfunction
+
+    virtual task body();
+      int unsigned n = 10;
+      for (int i = 0; i < n; i++) begin
+        for (int j = 0; j < NR_READ_PORTS; j++) begin
+          addr[j] = $random() % NUM_WORDS;
+          dut.raddr_i[j] = addr[j];
+        end
+        @(posedge dut.clk_i);
+        for (int j = 0; j < NR_READ_PORTS; j++) begin
+          if (dut.rdata_o[j] !== dut.mem[addr[j]]) begin
+            `uvm_fatal("Read Data Mismatch", $sformatf("Expected: %h Actual: %h", dut.mem[addr[j]], dut.rdata_o[j]))
+          end
+        end
+        `uvm_do_with(addr)
+      end
+    endtask
+
+  endclass
+
+  // UVM Test Constraints
+  virtual class ariane_regfile_test_constraints extends uvm_constraints;
+    `uvm_object_utils(ariane_regfile_test_constraints)
+
+    ariane_regfile_test test;
+
+    function new(string name="ariane_regfile_test_constraints", ariane_regfile_test test);
+      super.new(name);
+      this.test = test;
+    endfunction
+
+    virtual function void post_randomize();
+      test.build_data();
+    endfunction
+
+  endclass
+
+  // UVM Test Environment
+  virtual class ariane_regfile_test_env extends uvm_env;
+    `uvm_component_utils(ariane_regfile_test_env)
+
+    ariane_regfile #(
+      .DATA_WIDTH(32),
+      .NR_READ_PORTS(2),
+      .NR_WRITE_PORTS(2),
+      .ZERO_REG_ZERO(0)
+    ) dut;
+
+    // UVM Test Constraints
+    ariane_regfile_test_constraints constraints;
+
+    function new(string name="ariane_regfile_test_env", uvm_component parent);
+      super.new(name, parent);
+      constraints = ariane_regfile_test_constraints::type_id::create("constraints", this);
+    endfunction
+
+  endclass
+
+  // UVM Test Setup
+  virtual function void build_phase(uvm_phase phase);
+    super.build_phase(phase);
+
+    // Randomize test environment
+    ariane_regfile_test_env env = ariane_regfile_test_env::type_id::create("env", this);
+    env.dut = dut;
+    env.randomize();
+  endfunction
+
+endclass
+```

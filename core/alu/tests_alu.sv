@@ -1,162 +1,249 @@
-# VerifAI TestGuru  Test Bench and Test Code for ALU in Verilog
-# File for: alu.sv 
-The `alu` module is an arithmetic logic unit (ALU) that performs arithmetic 
-and logic operations on two values and returns the result.
-```verilog
-`timescale 1 ns / 1 ps
+# VerifAI TestGuru
+# Explanation for: alu.sv
+# UVM Test Bench and UVM Test Code for Ariane ALU
 
-module alu_tb();
-    // Inputs
-    logic     clk_i;
-    logic     rst_ni;
-    fu_data_t fu_data_i;
-    // Outputs
-    riscv::xlen_t result_o;
-    logic     alu_branch_res_o;
-    // Instantiate the DUT
-    alu dut (
-        .clk_i(clk_i),
-        .rst_ni(rst_ni),
-        .fu_data_i(fu_data_i),
-        .result_o(result_o),
-        .alu_branch_res_o(alu_branch_res_o)
-    );
+The Ariane ALU is a module written in Verilog. To ensure its functionality, we need to create a UVM test bench and UVM test code. The UVM test bench will contain the environment, sequence, and stimulus generation components, while the UVM test code will define the functionality to be tested.
 
-    initial begin
-        // Initialize Inputs
-        clk_i = 0;
-        rst_ni = 0;
-        fu_data_i.operand_a = 4'b0000;
-        fu_data_i.operand_b = 4'b0000;
-        fu_data_i.operator = ANDL;
+## UVM Test Bench
 
-        // Wait for at least one positive edge on the clock
-        #10;
+The UVM Test Bench for the Ariane ALU will contain the following components:
+- Environment
+- Stimulus Generation
+- Test Sequence
 
-        // Start the test with the "ANDL" operator
-        assert(result_o == 4'b0000) else $error("Test failed - ANDL");
-        fu_data_i.operand_a = 4'b1111;
-        assert(result_o == 4'b0000) else $error("Test failed - ANDL");
-        fu_data_i.operand_b = 4'b1111;
-        assert(result_o == 4'b1111) else $error("Test failed - ANDL");
+### Environment
+The environment component of the UVM test bench will contain the Ariane ALU and all modules required to connect to the module, such as interfaces, drivers, and monitors.
 
-        // Test the "ORL" and "XORL" operators
-        fu_data_i.operator = ORL;
-        fu_data_i.operand_a = 4'b0000;
-        fu_data_i.operand_b = 4'b0000;
-        assert(result_o == 4'b0000) else $error("Test failed - ORL");
-        fu_data_i.operand_a = 4'b1111;
-        assert(result_o == 4'b1111) else $error("Test failed - ORL");
-        fu_data_i.operand_b = 4'b1111;
-        assert(result_o == 4'b1111) else $error("Test failed - ORL");
+```systemverilog
+`ifndef ARIANE_ALU_ENV_SV
+`define ARIANE_ALU_ENV_SV
 
-        fu_data_i.operator = XORL;
-        fu_data_i.operand_a = 4'b0000;
-        fu_data_i.operand_b = 4'b0000;
-        assert(result_o == 4'b0000) else $error("Test failed - XORL");
-        fu_data_i.operand_a = 4'b1111;
-        assert(result_o == 4'b1111) else $error("Test failed - XORL");
-        fu_data_i.operand_b = 4'b1111;
-        assert(result_o == 4'b0000) else $error("Test failed - XORL");
+class ariane_alu_env extends uvm_env;
 
-        // Test the "ADD" operator
-        fu_data_i.operator = ADD;
-        fu_data_i.operand_a = 32'h00000001;
-        fu_data_i.operand_b = 32'h00000002;
-        assert(result_o == 32'h00000003) else $error("Test failed - ADD");
+  `uvm_component_utils(ariane_alu_env)
 
-        // Test the "SUB" operator
-        fu_data_i.operator = SUB;
-        fu_data_i.operand_a = 32'h00000001;
-        fu_data_i.operand_b = 32'h00000002;
-        assert(result_o == 32'hffffffff) else $error("Test failed - SUB");
+  // Interface to connect to the Ariane ALU
+  ariane_alu_if alu_if;
 
-        // Test the "SLL" (shift left logical) operator
-        fu_data_i.operator = SLL;
-        fu_data_i.operand_a = 32'h00000001;
-        fu_data_i.operand_b = 32'h00000001;
-        assert(result_o == 32'h00000002) else $error("Test failed - SLL");
+  // Driver for protocol implementation
+  ariane_alu_driver alu_driver;
 
-        // Test the "SRL" (shift right logical) operator
-        fu_data_i.operator = SRL;
-        fu_data_i.operand_a = 32'h80000000;
-        fu_data_i.operand_b = 32'h00000001;
-        assert(result_o == 32'h40000000) else $error("Test failed - SRL");
+  // Monitor for protocol implementation
+  ariane_alu_monitor alu_monitor;
 
-        // Test the "SRA" (shift right arithmetic) operator
-        fu_data_i.operator = SRA;
-        fu_data_i.operand_a = 32'h80000000;
-        fu_data_i.operand_b = 32'h00000001;
-        assert(result_o == 32'hc0000000) else $error("Test failed - SRA");
+  // Ariane ALU module instance
+  alu #(riscv::xlen_t) ariane_alu;
 
-        // Test the "SLTS" (set less than signed) operator
-        fu_data_i.operator = SLTS;
-        fu_data_i.operand_a = 32'hffffffff;
-        fu_data_i.operand_b = 32'h00000002;
-        assert(result_o == 1'b1) else $error("Test failed - SLTS");
-        fu_data_i.operand_a = 32'h00000001;
-        assert(result_o == 1'b0) else $error("Test failed - SLTS");
+  function new(string name = "ariane_alu_env", uvm_component parent=null);
+    super.new(name, parent);
+  endfunction: new
 
-        // Finish the test
-        $display("Test passed successfully!");
-        $finish();
+  virtual function void build_phase(uvm_phase phase);
+    super.build_phase(phase);
+
+    // Create an instance of the Ariane ALU
+    ariane_alu = new(.clk_i(alu_if.clk_i),
+                     .rst_ni(alu_if.rst_ni),
+                     .fu_data_i(alu_if.fu_data_i),
+                     .result_o(alu_if.result_o),
+                     .alu_branch_res_o(alu_if.alu_branch_res_o));
+
+    // Create the driver and the monitor for the Ariane ALU
+    alu_driver = ariane_alu_driver::type_id::create("alu_driver", this);
+    alu_monitor = ariane_alu_monitor::type_id::create("alu_monitor", this);
+
+    // Connect the Ariane ALU to the driver and the monitor
+    alu_driver.alu_if = alu_if;
+    alu_monitor.alu_if = alu_if;
+  endfunction: build_phase
+endclass: ariane_alu_env
+
+`endif //ARIANE_ALU_ENV_SV
+```
+
+### Stimulus Generation
+The stimulus generation component of the UVM test bench will create the necessary input values for the Ariane ALU, like operand_a and operand_b.
+
+```systemverilog
+`ifndef ARIANE_ALU_STIMULUS_GEN_SV
+`define ARIANE_ALU_STIMULUS_GEN_SV
+
+class ariane_alu_stimulus_gen extends uvm_sequence #(fu_data_t);
+
+  `uvm_object_param_utils(ariane_alu_stimulus_gen)
+
+  function new(string name = "ariane_alu_stimulus_gen");
+    super.new(name);
+  endfunction
+
+  virtual task body();
+    // create values for the Ariane ALU inputs
+    fu_data_t data;
+
+    data.operand_a = 'h1234;
+    data.operand_b = 'h5678;
+    data.operator = EQ;
+
+    // create and start a new transaction
+    `uvm_info("ARIANE_ALU_STIMULUS_GEN", $sformatf("Starting transaction with operand_a = 0x%0h operand_b = 0x%0h and operator = %s", data.operand_a, data.operand_b, fu_op_enum'name(data.operator)), UVM_MEDIUM)
+    start_item(data);
+
+    // wait for the transaction to be completed
+    finish_item(data);
+    `uvm_info("ARIANE_ALU_STIMULUS_GEN", "Transaction completed", UVM_MEDIUM)
+  endtask: body
+endclass: ariane_alu_stimulus_gen
+
+`endif //ARIANE_ALU_STIMULUS_GEN_SV
+```
+
+### Test Sequence
+The test sequence component of the UVM test bench will define the test flow, which includes sending input transactions to the Ariane ALU and verifying the output.
+
+```systemverilog
+`ifndef ARIANE_ALU_TEST_SEQ_SV
+`define ARIANE_ALU_TEST_SEQ_SV
+
+class ariane_alu_test_seq extends uvm_sequence #(fu_data_t);
+
+  `uvm_object_param_utils(ariane_alu_test_seq)
+
+  function new(string name = "ariane_alu_test_seq");
+    super.new(name);
+  endfunction
+
+  virtual task body();
+    fu_data_t data;
+
+    // creating a sequence of test values
+    foreach (data.operator) fu_op_enum::all() begin
+      data.operand_a = 'h1234;
+      data.operand_b = 'h5678;
+      start_item(data);
     end
 
-    always #5 clk_i = ~clk_i; // create a 5ns clock cycle
+    finish_sequences();
+  endtask: body
+endclass: ariane_alu_test_seq
 
+`endif //ARIANE_ALU_TEST_SEQ_SV
+```
+
+## UVM Test Code
+
+The UVM test code for the Ariane ALU will verify its functionality by creating input transactions and verifying the output.
+
+```systemverilog
+`include "ariane_alu_pkg.sv"
+`include "ariane_alu_env.sv"
+`include "ariane_alu_stimulus_gen.sv"
+`include "ariane_alu_test_seq.sv"
+
+module ariane_alu_test;
+
+  initial begin
+    // Set configuration
+    uvm_config_db#(int)::set(null, "uvm_test_top", "run_phase", "vif_tb_cfg", 1);
+
+    // Create the UVM environment
+    ariane_alu_env env = ariane_alu_env::type_id::create("env", null);
+
+    // Create the UVM test sequence
+    ariane_alu_test_seq test_seq = ariane_alu_test_seq::type_id::create("test_seq");
+
+    // Create the UVM stimulus generator
+    ariane_alu_stimulus_gen stim_gen = ariane_alu_stimulus_gen::type_id::create("stim_gen");
+
+    // Start the test
+    uvm# UVM Test Bench and Test Code for the Verilog Code
+
+## Test Bench
+
+```systemverilog
+`include "uvm_macros.svh"
+
+module testbench;
+  import uvm_pkg::*;
+  import ariane_pkg::*;
+  
+  // DUT instance
+  dut my_dut();
+  
+  // Test case count
+  int unsigned num_tests = 0;
+  
+  // UVM test sequence
+  class my_seq extends uvm_sequence#(rv_fu_data_t);
+    `uvm_object_utils(my_seq)
+
+    // Constructor
+    function new(string name = "my_seq");
+      super.new(name);
+    endfunction
+    
+    // Test sequence execution
+    task body();
+      rv_fu_data_t fu_data;
+      fu_data.operand_a = 32'h1234;
+      fu_data.operand_b = 32'h5678;
+      fu_data.operator = MAX;
+      start_item(fu_data);
+      finish_item(fu_data);
+    endtask
+  endclass
+  
+  // UVM test
+  class my_test extends uvm_test;
+    `uvm_component_utils(my_test)
+
+    // Constructor
+    function new(string name = "my_test", uvm_component parent = null);
+      super.new(name, parent);
+    endfunction
+
+    // Test sequence execution and checking
+    virtual task body();
+      my_seq seq = my_seq::type_id::create("my_seq");
+      rv_fu_data_t fu_data;
+      seq.start(null);
+      `uvm_info(get_name(), $sformatf("Test Count: %0d", num_tests), UVM_MEDIUM)
+      end_test();
+    endtask
+  endclass
+  
+  // UVM test registrar
+  initial begin
+    run_test("my_test");
+  end
+  
 endmodule
 ```
 
-## Explanation
+## Test Code
 
-The test bench code first declares the inputs and outputs of the `alu` module and then instantiates the `alu` module `dut`. 
-
-The parameters of the `fu_data_i` variable are then initialized to perform the tests for the `ANDL` operator. The test bench then waits for at least one positive edge on the clock (`#10`) and checks whether the results of the `ANDL` operation are correct. This process is repeated for all the other required operations like `ORL`, `XORL`, `ADD`, `SUB`, `SLL`, `SRL`, `SRA`, `SLTS`, etc.
-
-The assertion syntax is used to check if the output of the ALU is as per the requirement. If the assertion fails, `$error` is called to terminate the simulation. If all the assertions pass, the test is successful.
-
-Once all the tests are completedTo create a test bench for this Verilog code, we would need to define some inputs and expected outputs for each of the unique cases in the `case` statement. We can create a separate test code that instantiates the module and provides different input values to test its functionality. Here's an example of what the test code might look like:
-
-```verilog
-module test_bitwise_operations();
-
-    // Inputs
-    logic [31:0] operand_a;
-    logic [31:0] operand_b;
-    logic [2:0] operator;
-
-    // Outputs
-    logic [31:0] result_o;
-
-    // Instantiate the module
-    bitwise_operations dut (
-        .fu_data_i({operand_a, operand_b, operator}),
-        .result_o(result_o)
-    );
-
-    // Set up test cases
-    initial begin
-        $monitor("Input: operand_a = %h operand_b = %h operator = %d  Output: result_o = %h", operand_a, operand_b, operator, result_o);
-
-        // Test SLLIUW
-        operand_a = 32'h0000000f;
-        operand_b = 6'd8;
-        operator = 3'd0;
-        #10;
-        if (result_o !== 32'h0000f000) $display("Error: SLLIUW Test failed: Expected %h but got %h", 32'h0000f000, result_o);
-
-        // Test MAX
-        operand_a = 32'h0000000f;
-        operand_b = 32'hffffffff;
-        operator = 3'd3;
-        #10;
-        if (result_o !== 32'hffffffff) $display("Error: MAX Test failed: Expected %h but got %h", 32'hffffffff, result_o);
-
-        // Add more test cases for each unique case in the original code
-
-        $finish;
-    end
-endmodule
+```systemverilog
+// Test case for MAX operator
+virtual task run_test();
+  reg [31:0] a, b, result, expected_result;
+  rv_fu fu;
+  rv_fu_data_t fu_data;
+  fu = new();
+  fu_data.operand_a = a;
+  fu_data.operand_b = b;
+  fu_data.operator = MAX;
+  
+  // Test case 1
+  a = 32'h1234;
+  b = 32'h5678;
+  expected_result = b < a ? a : b;
+  fu.compute(fu_data);
+  result = fu.result_o;
+  if(result == expected_result) begin
+    `uvm_info(get_name(), "Test case 1 passed.", UVM_MEDIUM)
+  end
+  else begin
+    `uvm_error(get_name(), {"Test case 1 failed. Expected result: ", expected_result, ". Actual result: ", result})
+  end
+  num_tests++;
+endtask
 ```
-
-This test code sets up some example input values and checks the corresponding output values against the expected values. It also includes a `$monitor` statement to print out the input and expected output values during simulation. We can add more test cases for each unique case in the original code to ensure that the module works as expected for all inputs.
