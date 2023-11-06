@@ -1,0 +1,3 @@
+# VerifAI TestGuru
+# explain for: mult.sv
+The mult module implements a multiplier and divider for RISC-V. The module takes in a fu_data_t struct which contains the operator, operands, and transaction ID. The module then checks if the operation is a multiplication or division and forwards the request to the appropriate unit. The multiplier unit is a dumb pipelined multiplier, while the divider unit is a serial divider. The module also implements an input MUX and output MUX to handle word operations and signed operations.
