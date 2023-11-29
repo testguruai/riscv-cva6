@@ -1,0 +1,1153 @@
+INFO:verifai:(11-29-2023 18:22:24):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:22:25):
+INFO:verifai:(11-29-2023 18:22:25):==================================================
+INFO:verifai:(11-29-2023 18:22:25):2023-11-29 18:22:25 - Starting Verifai
+INFO:verifai:(11-29-2023 18:22:25):==================================================
+INFO:verifai:(11-29-2023 18:22:25):Args: ['testguru', '-c', 'config.json', '-src', 'load_store_unit.sv']
+INFO:verifai:(11-29-2023 18:22:25):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:22:25):directory .verifaiws/load_store_unit created
+INFO:verifai:(11-29-2023 18:22:25):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:22:25):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:22:25):Checking for prompt
+INFO:verifai:(11-29-2023 18:22:25):Setting source as ['load_store_unit.sv']
+WARNING:verifai:(11-29-2023 18:22:25):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:22:25):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:22:25):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:22:25):Using default end value None
+INFO:verifai:(11-29-2023 18:22:25):Running task tests
+INFO:verifai:(11-29-2023 18:22:25):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:22:25):generated master file: .verifaiws/load_store_unit/.load_store_unit_master_file.sv
+INFO:verifai:(11-29-2023 18:22:25):annotations {'Results': {'files': [{'name': '.verifaiws/load_store_unit/.load_store_unit_master_file.sv', 'annotations': [{'start': 16, 'end': 474, 'tag': 'module', 'name': 'load_store_unit'}, {'start': 327, 'end': 352, 'tag': 'always', 'name': 'begin'}, {'start': 370, 'end': 448, 'tag': 'always', 'name': 'begin'}, {'start': 336, 'end': 351, 'tag': 'case', 'name': 'case'}, {'start': 219, 'end': 227, 'tag': 'always', 'name': '@(posedge'}, {'start': 381, 'end': 410, 'tag': 'case', 'name': '(lsu_ctrl.operator)\n'}]}]}}
+INFO:verifai:(11-29-2023 18:22:25):annotations [227, 351, 352, 410, 448, 474]
+INFO:verifai:(11-29-2023 18:22:25):Chunk tokens is 938
+INFO:verifai:(11-29-2023 18:22:25):Chunk tokens is 376
+INFO:verifai:(11-29-2023 18:22:25):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:22:25):Chunk tokens is 203
+INFO:verifai:(11-29-2023 18:22:25):Chunk tokens is 66
+INFO:verifai:(11-29-2023 18:22:25):Chunk tokens is 83
+INFO:verifai:(11-29-2023 18:22:25):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:22:25):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:22:25):==================================================
+INFO:verifai:(11-29-2023 18:22:25):2023-11-29 18:22:25 - End Program
+INFO:verifai:(11-29-2023 18:22:25):Elapsed time: 00:352618 (Total)
+INFO:verifai:(11-29-2023 18:22:25):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:22:25):==================================================
+INFO:verifai:(11-29-2023 18:22:26):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:22:27):
+INFO:verifai:(11-29-2023 18:22:27):==================================================
+INFO:verifai:(11-29-2023 18:22:27):2023-11-29 18:22:27 - Starting Verifai
+INFO:verifai:(11-29-2023 18:22:27):==================================================
+INFO:verifai:(11-29-2023 18:22:27):Args: ['testguru', '-c', 'config.json', '-src', 'cva6.sv']
+INFO:verifai:(11-29-2023 18:22:27):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:22:27):directory .verifaiws/cva6 created
+INFO:verifai:(11-29-2023 18:22:27):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:22:27):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:22:27):Checking for prompt
+INFO:verifai:(11-29-2023 18:22:27):Setting source as ['cva6.sv']
+WARNING:verifai:(11-29-2023 18:22:27):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:22:27):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:22:27):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:22:27):Using default end value None
+INFO:verifai:(11-29-2023 18:22:27):Running task tests
+INFO:verifai:(11-29-2023 18:22:27):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:22:27):generated master file: .verifaiws/cva6/.cva6_master_file.sv
+INFO:verifai:(11-29-2023 18:22:27):annotations {'Results': {'files': [{'name': '.verifaiws/cva6/.cva6_master_file.sv', 'annotations': [{'start': 26, 'end': 1026, 'tag': 'module', 'name': 'cva6'}]}]}}
+INFO:verifai:(11-29-2023 18:22:27):annotations [1026]
+INFO:verifai:(11-29-2023 18:22:27):Chunk tokens is 3460
+INFO:verifai:(11-29-2023 18:22:27):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:22:27):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:22:27):==================================================
+INFO:verifai:(11-29-2023 18:22:27):2023-11-29 18:22:27 - End Program
+INFO:verifai:(11-29-2023 18:22:27):Elapsed time: 00:416897 (Total)
+INFO:verifai:(11-29-2023 18:22:27):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:22:27):==================================================
+INFO:verifai:(11-29-2023 18:22:27):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:22:29):
+INFO:verifai:(11-29-2023 18:22:29):==================================================
+INFO:verifai:(11-29-2023 18:22:29):2023-11-29 18:22:28 - Starting Verifai
+INFO:verifai:(11-29-2023 18:22:29):==================================================
+INFO:verifai:(11-29-2023 18:22:29):Args: ['testguru', '-c', 'config.json', '-src', 'decoder.sv']
+INFO:verifai:(11-29-2023 18:22:29):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:22:29):directory .verifaiws/decoder created
+INFO:verifai:(11-29-2023 18:22:29):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:22:29):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:22:29):Checking for prompt
+INFO:verifai:(11-29-2023 18:22:29):Setting source as ['decoder.sv']
+WARNING:verifai:(11-29-2023 18:22:29):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:22:29):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:22:29):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:22:29):Using default end value None
+INFO:verifai:(11-29-2023 18:22:29):Running task tests
+INFO:verifai:(11-29-2023 18:22:29):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:22:29):generated master file: .verifaiws/decoder/.decoder_master_file.sv
+INFO:verifai:(11-29-2023 18:22:29):annotations {'Results': {'files': [{'name': '.verifaiws/decoder/.decoder_master_file.sv', 'annotations': [{'start': 22, 'end': 1280, 'tag': 'module', 'name': 'decoder'}, {'start': 69, 'end': 1134, 'tag': 'always', 'name': 'begin'}, {'start': 1139, 'end': 1180, 'tag': 'always', 'name': 'begin'}, {'start': 1190, 'end': 1279, 'tag': 'always', 'name': 'begin'}, {'start': 1149, 'end': 1179, 'tag': 'case', 'name': '(imm_select)\n'}, {'start': 92, 'end': 1122, 'tag': 'case', 'name': '(instr.rtype.opcode)\n'}, {'start': 99, 'end': 223, 'tag': 'case', 'name': 'case'}, {'start': 232, 'end': 240, 'tag': 'case', 'name': '(instr.stype.funct3)\n'}, {'start': 599, 'end': 623, 'tag': 'case', 'name': 'case'}, {'start': 728, 'end': 735, 'tag': 'case', 'name': 'case'}, {'start': 744, 'end': 754, 'tag': 'case', 'name': 'case'}, {'start': 1076, 'end': 1087, 'tag': 'case', 'name': '(instr.stype.funct3)\n'}, {'start': 1212, 'end': 1217, 'tag': 'case', 'name': '(priv_lvl_i)\n'}, {'start': 105, 'end': 170, 'tag': 'case', 'name': '(instr.itype.imm)\n'}, {'start': 488, 'end': 512, 'tag': 'case', 'name': 'case'}, {'start': 558, 'end': 571, 'tag': 'case', 'name': 'case'}, {'start': 625, 'end': 661, 'tag': 'case', 'name': 'case'}, {'start': 675, 'end': 691, 'tag': 'case', 'name': 'case'}, {'start': 767, 'end': 778, 'tag': 'case', 'name': 'case'}, {'start': 790, 'end': 801, 'tag': 'case', 'name': 'case'}, {'start': 821, 'end': 826, 'tag': 'case', 'name': 'case'}, {'start': 829, 'end': 836, 'tag': 'case', 'name': 'case'}, {'start': 873, 'end': 973, 'tag': 'case', 'name': 'case'}, {'start': 976, 'end': 983, 'tag': 'case', 'name': 'case'}, {'start': 1024, 'end': 1040, 'tag': 'case', 'name': 'case'}, {'start': 1043, 'end': 1059, 'tag': 'case', 'name': 'case'}, {'start': 262, 'end': 448, 'tag': 'case', 'name': 'case'}, {'start': 451, 'end': 458, 'tag': 'case', 'name': 'case'}, {'start': 514, 'end': 543, 'tag': 'case', 'name': 'case'}, {'start': 573, 'end': 586, 'tag': 'case', 'name': 'case'}, {'start': 693, 'end': 714, 'tag': 'case', 'name': 'case'}, {'start': 840, 'end': 858, 'tag': 'case', 'name': 'case'}, {'start': 921, 'end': 929, 'tag': 'case', 'name': 'case'}, {'start': 987, 'end': 1005, 'tag': 'case', 'name': 'case'}, {'start': 299, 'end': 331, 'tag': 'case', 'name': 'case'}, {'start': 374, 'end': 390, 'tag': 'case', 'name': 'case'}, {'start': 397, 'end': 406, 'tag': 'case', 'name': 'case'}, {'start': 413, 'end': 429, 'tag': 'case', 'name': 'case'}, {'start': 436, 'end': 445, 'tag': 'case', 'name': 'case'}, {'start': 465, 'end': 468, 'tag': 'case', 'name': 'case'}, {'start': 845, 'end': 848, 'tag': 'case', 'name': 'case'}, {'start': 852, 'end': 855, 'tag': 'case', 'name': 'case'}, {'start': 992, 'end': 995, 'tag': 'case', 'name': 'case'}, {'start': 999, 'end': 1002, 'tag': 'case', 'name': 'case'}, {'start': 321, 'end': 328, 'tag': 'case', 'name': 'case'}]}]}}
+INFO:verifai:(11-29-2023 18:22:29):annotations [170, 223, 240, 328, 331, 390, 406, 429, 445, 448, 458, 468, 512, 543, 571, 586, 623, 661, 691, 714, 735, 754, 778, 801, 826, 836, 848, 855, 858, 929, 973, 983, 995, 1002, 1005, 1040, 1059, 1087, 1122, 1134, 1179, 1180, 1217, 1279, 1280]
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 843
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 179
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 50
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 541
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 7
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 339
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 125
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 139
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 125
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 7
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 45
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 40
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 204
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 169
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 114
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 78
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 169
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 129
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 105
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 83
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 70
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 64
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 103
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 101
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 111
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 48
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 57
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 24
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 7
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 385
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 300
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 47
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 57
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 24
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 7
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 114
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 73
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 69
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 96
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 30
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 151
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 234
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 302
+INFO:verifai:(11-29-2023 18:22:29):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:22:29):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:22:30):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:22:30):==================================================
+INFO:verifai:(11-29-2023 18:22:30):2023-11-29 18:22:30 - End Program
+INFO:verifai:(11-29-2023 18:22:30):Elapsed time: 01:132007 (Total)
+INFO:verifai:(11-29-2023 18:22:30):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:22:30):==================================================
+INFO:verifai:(11-29-2023 18:22:30):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:22:31):
+INFO:verifai:(11-29-2023 18:22:31):==================================================
+INFO:verifai:(11-29-2023 18:22:31):2023-11-29 18:22:31 - Starting Verifai
+INFO:verifai:(11-29-2023 18:22:31):==================================================
+INFO:verifai:(11-29-2023 18:22:31):Args: ['testguru', '-c', 'config.json', '-src', 'axi_adapter.sv']
+INFO:verifai:(11-29-2023 18:22:31):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:22:31):directory .verifaiws/axi_adapter created
+INFO:verifai:(11-29-2023 18:22:31):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:22:31):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:22:31):Checking for prompt
+INFO:verifai:(11-29-2023 18:22:31):Setting source as ['axi_adapter.sv']
+WARNING:verifai:(11-29-2023 18:22:31):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:22:31):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:22:31):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:22:31):Using default end value None
+INFO:verifai:(11-29-2023 18:22:31):Running task tests
+INFO:verifai:(11-29-2023 18:22:31):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:22:31):generated master file: .verifaiws/axi_adapter/.axi_adapter_master_file.sv
+INFO:verifai:(11-29-2023 18:22:31):annotations {'Results': {'files': [{'name': '.verifaiws/axi_adapter/.axi_adapter_master_file.sv', 'annotations': [{'start': 19, 'end': 454, 'tag': 'module', 'name': 'axi_adapter'}, {'start': 72, 'end': 399, 'tag': 'always', 'name': 'begin'}, {'start': 404, 'end': 423, 'tag': 'always', 'name': '@(posedge'}, {'start': 428, 'end': 442, 'tag': 'case', 'name': 'case(amo)\n'}, {'start': 134, 'end': 398, 'tag': 'case', 'name': '(state_q)\n\n'}, {'start': 239, 'end': 261, 'tag': 'case', 'name': '({axi_resp_i.aw_ready,'}, {'start': 154, 'end': 159, 'tag': 'case', 'name': '({axi_resp_i.aw_ready,'}, {'start': 181, 'end': 186, 'tag': 'case', 'name': '({axi_resp_i.aw_ready,'}]}]}}
+INFO:verifai:(11-29-2023 18:22:31):annotations [159, 186, 261, 398, 399, 423, 442, 454]
+INFO:verifai:(11-29-2023 18:22:31):Chunk tokens is 711
+INFO:verifai:(11-29-2023 18:22:31):Chunk tokens is 82
+INFO:verifai:(11-29-2023 18:22:31):Chunk tokens is 244
+INFO:verifai:(11-29-2023 18:22:31):Chunk tokens is 456
+INFO:verifai:(11-29-2023 18:22:31):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:22:31):Chunk tokens is 72
+INFO:verifai:(11-29-2023 18:22:31):Chunk tokens is 93
+INFO:verifai:(11-29-2023 18:22:31):Chunk tokens is 30
+INFO:verifai:(11-29-2023 18:22:31):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:22:32):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:22:32):==================================================
+INFO:verifai:(11-29-2023 18:22:32):2023-11-29 18:22:32 - End Program
+INFO:verifai:(11-29-2023 18:22:32):Elapsed time: 00:777672 (Total)
+INFO:verifai:(11-29-2023 18:22:32):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:22:32):==================================================
+INFO:verifai:(11-29-2023 18:22:32):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:22:33):
+INFO:verifai:(11-29-2023 18:22:33):==================================================
+INFO:verifai:(11-29-2023 18:22:33):2023-11-29 18:22:33 - Starting Verifai
+INFO:verifai:(11-29-2023 18:22:33):==================================================
+INFO:verifai:(11-29-2023 18:22:33):Args: ['testguru', '-c', 'config.json', '-src', 'load_unit.sv']
+INFO:verifai:(11-29-2023 18:22:33):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:22:33):directory .verifaiws/load_unit created
+INFO:verifai:(11-29-2023 18:22:33):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:22:33):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:22:33):Checking for prompt
+INFO:verifai:(11-29-2023 18:22:33):Setting source as ['load_unit.sv']
+WARNING:verifai:(11-29-2023 18:22:33):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:22:33):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:22:33):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:22:33):Using default end value None
+INFO:verifai:(11-29-2023 18:22:33):Running task tests
+INFO:verifai:(11-29-2023 18:22:33):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:22:33):generated master file: .verifaiws/load_unit/.load_unit_master_file.sv
+INFO:verifai:(11-29-2023 18:22:33):annotations {'Results': {'files': [{'name': '.verifaiws/load_unit/.load_unit_master_file.sv', 'annotations': [{'start': 16, 'end': 398, 'tag': 'module', 'name': 'load_unit'}, {'start': 93, 'end': 262, 'tag': 'always', 'name': 'begin'}, {'start': 268, 'end': 299, 'tag': 'always', 'name': 'begin'}, {'start': 303, 'end': 311, 'tag': 'always', 'name': '@(posedge'}, {'start': 360, 'end': 367, 'tag': 'always', 'name': 'begin\n'}, {'start': 369, 'end': 379, 'tag': 'always', 'name': '@(posedge'}, {'start': 106, 'end': 242, 'tag': 'case', 'name': '(state_q)\n'}, {'start': 361, 'end': 366, 'tag': 'case', 'name': 'case'}]}]}}
+INFO:verifai:(11-29-2023 18:22:33):annotations [242, 262, 299, 311, 366, 367, 379, 398]
+INFO:verifai:(11-29-2023 18:22:33):Chunk tokens is 1336
+INFO:verifai:(11-29-2023 18:22:33):Chunk tokens is 108
+INFO:verifai:(11-29-2023 18:22:33):Chunk tokens is 249
+INFO:verifai:(11-29-2023 18:22:33):Chunk tokens is 41
+INFO:verifai:(11-29-2023 18:22:33):Chunk tokens is 231
+INFO:verifai:(11-29-2023 18:22:33):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:22:33):Chunk tokens is 35
+INFO:verifai:(11-29-2023 18:22:33):Chunk tokens is 102
+INFO:verifai:(11-29-2023 18:22:33):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:22:34):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:22:34):==================================================
+INFO:verifai:(11-29-2023 18:22:34):2023-11-29 18:22:34 - End Program
+INFO:verifai:(11-29-2023 18:22:34):Elapsed time: 00:290989 (Total)
+INFO:verifai:(11-29-2023 18:22:34):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:22:34):==================================================
+INFO:verifai:(11-29-2023 18:22:34):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:22:35):
+INFO:verifai:(11-29-2023 18:22:35):==================================================
+INFO:verifai:(11-29-2023 18:22:35):2023-11-29 18:22:35 - Starting Verifai
+INFO:verifai:(11-29-2023 18:22:35):==================================================
+INFO:verifai:(11-29-2023 18:22:35):Args: ['testguru', '-c', 'config.json', '-src', 'csr_regfile.sv']
+INFO:verifai:(11-29-2023 18:22:35):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:22:35):directory .verifaiws/csr_regfile created
+INFO:verifai:(11-29-2023 18:22:35):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:22:35):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:22:35):Checking for prompt
+INFO:verifai:(11-29-2023 18:22:35):Setting source as ['csr_regfile.sv']
+WARNING:verifai:(11-29-2023 18:22:35):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:22:35):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:22:35):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:22:35):Using default end value None
+INFO:verifai:(11-29-2023 18:22:35):Running task tests
+INFO:verifai:(11-29-2023 18:22:35):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:22:35):generated master file: .verifaiws/csr_regfile/.csr_regfile_master_file.sv
+INFO:verifai:(11-29-2023 18:22:35):annotations {'Results': {'files': [{'name': '.verifaiws/csr_regfile/.csr_regfile_master_file.sv', 'annotations': [{'start': 16, 'end': 1208, 'tag': 'module', 'name': 'csr_regfile'}, {'start': 161, 'end': 322, 'tag': 'always', 'name': 'begin'}, {'start': 327, 'end': 874, 'tag': 'always', 'name': 'begin'}, {'start': 879, 'end': 920, 'tag': 'always', 'name': 'begin'}, {'start': 932, 'end': 957, 'tag': 'always', 'name': 'begin'}, {'start': 961, 'end': 981, 'tag': 'always', 'name': 'begin'}, {'start': 986, 'end': 998, 'tag': 'always', 'name': 'begin'}, {'start': 1001, 'end': 1033, 'tag': 'always', 'name': 'begin'}, {'start': 1038, 'end': 1053, 'tag': 'always', 'name': 'begin\n'}, {'start': 1088, 'end': 1195, 'tag': 'always', 'name': '@(posedge'}, {'start': 887, 'end': 914, 'tag': 'case', 'name': 'case'}, {'start': 1044, 'end': 1052, 'tag': 'case', 'name': 'case'}, {'start': 168, 'end': 320, 'tag': 'case', 'name': 'case'}, {'start': 410, 'end': 650, 'tag': 'case', 'name': 'case'}, {'start': 761, 'end': 775, 'tag': 'case', 'name': 'case'}, {'start': 950, 'end': 954, 'tag': 'case', 'name': 'case'}]}]}}
+INFO:verifai:(11-29-2023 18:22:35):annotations [320, 322, 650, 775, 874, 914, 920, 954, 957, 981, 998, 1033, 1052, 1053, 1195, 1208]
+INFO:verifai:(11-29-2023 18:22:35):Chunk tokens is 1488
+INFO:verifai:(11-29-2023 18:22:35):Chunk tokens is 2
+INFO:verifai:(11-29-2023 18:22:35):Chunk tokens is 1235
+INFO:verifai:(11-29-2023 18:22:35):Chunk tokens is 558
+INFO:verifai:(11-29-2023 18:22:35):Chunk tokens is 475
+INFO:verifai:(11-29-2023 18:22:35):Chunk tokens is 154
+INFO:verifai:(11-29-2023 18:22:35):Chunk tokens is 24
+INFO:verifai:(11-29-2023 18:22:35):Chunk tokens is 154
+INFO:verifai:(11-29-2023 18:22:35):Chunk tokens is 3
+INFO:verifai:(11-29-2023 18:22:35):Chunk tokens is 98
+INFO:verifai:(11-29-2023 18:22:35):Chunk tokens is 91
+INFO:verifai:(11-29-2023 18:22:35):Chunk tokens is 172
+INFO:verifai:(11-29-2023 18:22:35):Chunk tokens is 90
+INFO:verifai:(11-29-2023 18:22:35):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:22:35):Chunk tokens is 498
+INFO:verifai:(11-29-2023 18:22:35):Chunk tokens is 50
+INFO:verifai:(11-29-2023 18:22:35):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:22:36):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:22:36):==================================================
+INFO:verifai:(11-29-2023 18:22:36):2023-11-29 18:22:36 - End Program
+INFO:verifai:(11-29-2023 18:22:36):Elapsed time: 01:097692 (Total)
+INFO:verifai:(11-29-2023 18:22:36):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:22:36):==================================================
+INFO:verifai:(11-29-2023 18:22:37):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:22:38):
+INFO:verifai:(11-29-2023 18:22:38):==================================================
+INFO:verifai:(11-29-2023 18:22:38):2023-11-29 18:22:38 - Starting Verifai
+INFO:verifai:(11-29-2023 18:22:38):==================================================
+INFO:verifai:(11-29-2023 18:22:38):Args: ['testguru', '-c', 'config.json', '-src', 'perf_counters.sv']
+INFO:verifai:(11-29-2023 18:22:38):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:22:38):directory .verifaiws/perf_counters created
+INFO:verifai:(11-29-2023 18:22:38):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:22:38):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:22:38):Checking for prompt
+INFO:verifai:(11-29-2023 18:22:38):Setting source as ['perf_counters.sv']
+WARNING:verifai:(11-29-2023 18:22:38):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:22:38):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:22:38):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:22:38):Using default end value None
+INFO:verifai:(11-29-2023 18:22:38):Running task tests
+INFO:verifai:(11-29-2023 18:22:38):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:22:38):generated master file: .verifaiws/perf_counters/.perf_counters_master_file.sv
+INFO:verifai:(11-29-2023 18:22:38):annotations {'Results': {'files': [{'name': '.verifaiws/perf_counters/.perf_counters_master_file.sv', 'annotations': [{'start': 16, 'end': 133, 'tag': 'module', 'name': 'perf_counters'}, {'start': 48, 'end': 120, 'tag': 'always', 'name': 'begin'}, {'start': 125, 'end': 131, 'tag': 'always', 'name': '@(posedge'}]}]}}
+INFO:verifai:(11-29-2023 18:22:38):annotations [120, 131, 133]
+INFO:verifai:(11-29-2023 18:22:38):Chunk tokens is 493
+INFO:verifai:(11-29-2023 18:22:38):Chunk tokens is 27
+INFO:verifai:(11-29-2023 18:22:38):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:22:38):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:23:30):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:23:30):==================================================
+INFO:verifai:(11-29-2023 18:23:30):2023-11-29 18:23:30 - End Program
+INFO:verifai:(11-29-2023 18:23:30):Elapsed time: 52:318911 (Total)
+INFO:verifai:(11-29-2023 18:23:30):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:23:30):==================================================
+INFO:verifai:(11-29-2023 18:23:30):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:23:32):
+INFO:verifai:(11-29-2023 18:23:32):==================================================
+INFO:verifai:(11-29-2023 18:23:32):2023-11-29 18:23:32 - Starting Verifai
+INFO:verifai:(11-29-2023 18:23:32):==================================================
+INFO:verifai:(11-29-2023 18:23:32):Args: ['testguru', '-c', 'config.json', '-src', 'controller.sv']
+INFO:verifai:(11-29-2023 18:23:32):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:23:32):directory .verifaiws/controller created
+INFO:verifai:(11-29-2023 18:23:32):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:23:32):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:23:32):Checking for prompt
+INFO:verifai:(11-29-2023 18:23:32):Setting source as ['controller.sv']
+WARNING:verifai:(11-29-2023 18:23:32):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:23:32):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:23:32):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:23:32):Using default end value None
+INFO:verifai:(11-29-2023 18:23:32):Running task tests
+INFO:verifai:(11-29-2023 18:23:32):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:23:32):generated master file: .verifaiws/controller/.controller_master_file.sv
+INFO:verifai:(11-29-2023 18:23:32):annotations {'Results': {'files': [{'name': '.verifaiws/controller/.controller_master_file.sv', 'annotations': [{'start': 16, 'end': 182, 'tag': 'module', 'name': 'controller'}, {'start': 50, 'end': 159, 'tag': 'always', 'name': 'begin'}, {'start': 164, 'end': 167, 'tag': 'always', 'name': 'begin\n'}, {'start': 172, 'end': 181, 'tag': 'always', 'name': '@(posedge'}]}]}}
+INFO:verifai:(11-29-2023 18:23:32):annotations [159, 167, 181, 182]
+INFO:verifai:(11-29-2023 18:23:32):Chunk tokens is 750
+INFO:verifai:(11-29-2023 18:23:32):Chunk tokens is 24
+INFO:verifai:(11-29-2023 18:23:32):Chunk tokens is 44
+INFO:verifai:(11-29-2023 18:23:32):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:23:32):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:23:39):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:23:39):==================================================
+INFO:verifai:(11-29-2023 18:23:39):2023-11-29 18:23:39 - End Program
+INFO:verifai:(11-29-2023 18:23:39):Elapsed time: 07:920931 (Total)
+INFO:verifai:(11-29-2023 18:23:39):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:23:39):==================================================
+INFO:verifai:(11-29-2023 18:23:40):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:23:41):
+INFO:verifai:(11-29-2023 18:23:41):==================================================
+INFO:verifai:(11-29-2023 18:23:41):2023-11-29 18:23:41 - Starting Verifai
+INFO:verifai:(11-29-2023 18:23:41):==================================================
+INFO:verifai:(11-29-2023 18:23:41):Args: ['testguru', '-c', 'config.json', '-src', 'dromajo_ram.sv']
+INFO:verifai:(11-29-2023 18:23:41):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:23:41):directory .verifaiws/dromajo_ram created
+INFO:verifai:(11-29-2023 18:23:41):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:23:41):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:23:41):Checking for prompt
+INFO:verifai:(11-29-2023 18:23:41):Setting source as ['dromajo_ram.sv']
+WARNING:verifai:(11-29-2023 18:23:41):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:23:41):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:23:41):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:23:41):Using default end value None
+INFO:verifai:(11-29-2023 18:23:41):Running task tests
+INFO:verifai:(11-29-2023 18:24:01):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:24:01):==================================================
+INFO:verifai:(11-29-2023 18:24:01):2023-11-29 18:24:01 - End Program
+INFO:verifai:(11-29-2023 18:24:01):Elapsed time: 20:309585 (Total)
+INFO:verifai:(11-29-2023 18:24:01):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:24:01):==================================================
+INFO:verifai:(11-29-2023 18:24:02):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:24:03):
+INFO:verifai:(11-29-2023 18:24:03):==================================================
+INFO:verifai:(11-29-2023 18:24:03):2023-11-29 18:24:03 - Starting Verifai
+INFO:verifai:(11-29-2023 18:24:03):==================================================
+INFO:verifai:(11-29-2023 18:24:03):Args: ['testguru', '-c', 'config.json', '-src', 'axi_shim.sv']
+INFO:verifai:(11-29-2023 18:24:03):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:24:03):directory .verifaiws/axi_shim created
+INFO:verifai:(11-29-2023 18:24:03):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:24:03):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:24:03):Checking for prompt
+INFO:verifai:(11-29-2023 18:24:03):Setting source as ['axi_shim.sv']
+WARNING:verifai:(11-29-2023 18:24:03):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:24:03):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:24:03):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:24:03):Using default end value None
+INFO:verifai:(11-29-2023 18:24:03):Running task tests
+INFO:verifai:(11-29-2023 18:24:03):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:24:03):generated master file: .verifaiws/axi_shim/.axi_shim_master_file.sv
+INFO:verifai:(11-29-2023 18:24:03):annotations {'Results': {'files': [{'name': '.verifaiws/axi_shim/.axi_shim_master_file.sv', 'annotations': [{'start': 22, 'end': 302, 'tag': 'module', 'name': 'axi_shim'}, {'start': 119, 'end': 237, 'tag': 'always', 'name': 'begin'}, {'start': 276, 'end': 285, 'tag': 'always', 'name': '@(posedge'}, {'start': 130, 'end': 236, 'tag': 'case', 'name': '(wr_state_q)\n'}, {'start': 178, 'end': 204, 'tag': 'case', 'name': '({axi_resp_i.aw_ready,'}, {'start': 144, 'end': 148, 'tag': 'case', 'name': '({axi_resp_i.aw_ready,'}, {'start': 153, 'end': 158, 'tag': 'case', 'name': '({axi_resp_i.aw_ready,'}]}]}}
+INFO:verifai:(11-29-2023 18:24:03):annotations [148, 158, 204, 236, 237, 285, 302]
+INFO:verifai:(11-29-2023 18:24:03):Chunk tokens is 655
+INFO:verifai:(11-29-2023 18:24:03):Chunk tokens is 32
+INFO:verifai:(11-29-2023 18:24:03):Chunk tokens is 139
+INFO:verifai:(11-29-2023 18:24:03):Chunk tokens is 88
+INFO:verifai:(11-29-2023 18:24:03):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:24:03):Chunk tokens is 186
+INFO:verifai:(11-29-2023 18:24:03):Chunk tokens is 50
+INFO:verifai:(11-29-2023 18:24:03):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:24:03):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:24:03):==================================================
+INFO:verifai:(11-29-2023 18:24:03):2023-11-29 18:24:03 - End Program
+INFO:verifai:(11-29-2023 18:24:03):Elapsed time: 00:281573 (Total)
+INFO:verifai:(11-29-2023 18:24:03):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:24:03):==================================================
+INFO:verifai:(11-29-2023 18:24:03):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:24:04):
+INFO:verifai:(11-29-2023 18:24:04):==================================================
+INFO:verifai:(11-29-2023 18:24:04):2023-11-29 18:24:04 - Starting Verifai
+INFO:verifai:(11-29-2023 18:24:04):==================================================
+INFO:verifai:(11-29-2023 18:24:04):Args: ['testguru', '-c', 'config.json', '-src', 'ariane_regfile_ff.sv']
+INFO:verifai:(11-29-2023 18:24:04):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:24:04):directory .verifaiws/ariane_regfile_ff created
+INFO:verifai:(11-29-2023 18:24:04):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:24:04):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:24:04):Checking for prompt
+INFO:verifai:(11-29-2023 18:24:04):Setting source as ['ariane_regfile_ff.sv']
+WARNING:verifai:(11-29-2023 18:24:04):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:24:04):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:24:04):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:24:04):Using default end value None
+INFO:verifai:(11-29-2023 18:24:04):Running task tests
+INFO:verifai:(11-29-2023 18:25:03):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:25:03):==================================================
+INFO:verifai:(11-29-2023 18:25:03):2023-11-29 18:25:03 - End Program
+INFO:verifai:(11-29-2023 18:25:03):Elapsed time: 58:303441 (Total)
+INFO:verifai:(11-29-2023 18:25:03):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:25:03):==================================================
+INFO:verifai:(11-29-2023 18:25:03):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:25:04):
+INFO:verifai:(11-29-2023 18:25:04):==================================================
+INFO:verifai:(11-29-2023 18:25:04):2023-11-29 18:25:04 - Starting Verifai
+INFO:verifai:(11-29-2023 18:25:04):==================================================
+INFO:verifai:(11-29-2023 18:25:04):Args: ['testguru', '-c', 'config.json', '-src', 'branch_unit.sv']
+INFO:verifai:(11-29-2023 18:25:04):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:25:04):directory .verifaiws/branch_unit created
+INFO:verifai:(11-29-2023 18:25:04):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:25:04):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:25:04):Checking for prompt
+INFO:verifai:(11-29-2023 18:25:04):Setting source as ['branch_unit.sv']
+WARNING:verifai:(11-29-2023 18:25:04):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:25:04):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:25:04):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:25:04):Using default end value None
+INFO:verifai:(11-29-2023 18:25:04):Running task tests
+INFO:verifai:(11-29-2023 18:25:04):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:25:04):generated master file: .verifaiws/branch_unit/.branch_unit_master_file.sv
+INFO:verifai:(11-29-2023 18:25:04):annotations {'Results': {'files': [{'name': '.verifaiws/branch_unit/.branch_unit_master_file.sv', 'annotations': [{'start': 15, 'end': 94, 'tag': 'module', 'name': 'branch_unit'}, {'start': 37, 'end': 84, 'tag': 'always', 'name': 'begin'}, {'start': 87, 'end': 93, 'tag': 'always', 'name': 'begin'}]}]}}
+INFO:verifai:(11-29-2023 18:25:04):annotations [84, 93, 94]
+INFO:verifai:(11-29-2023 18:25:04):Chunk tokens is 579
+INFO:verifai:(11-29-2023 18:25:04):Chunk tokens is 57
+INFO:verifai:(11-29-2023 18:25:04):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:25:04):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:25:48):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:25:48):==================================================
+INFO:verifai:(11-29-2023 18:25:48):2023-11-29 18:25:48 - End Program
+INFO:verifai:(11-29-2023 18:25:48):Elapsed time: 43:986032 (Total)
+INFO:verifai:(11-29-2023 18:25:48):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:25:48):==================================================
+INFO:verifai:(11-29-2023 18:25:49):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:25:50):
+INFO:verifai:(11-29-2023 18:25:50):==================================================
+INFO:verifai:(11-29-2023 18:25:50):2023-11-29 18:25:50 - Starting Verifai
+INFO:verifai:(11-29-2023 18:25:50):==================================================
+INFO:verifai:(11-29-2023 18:25:50):Args: ['testguru', '-c', 'config.json', '-src', 'lsu_bypass.sv']
+INFO:verifai:(11-29-2023 18:25:50):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:25:50):directory .verifaiws/lsu_bypass created
+INFO:verifai:(11-29-2023 18:25:50):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:25:50):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:25:50):Checking for prompt
+INFO:verifai:(11-29-2023 18:25:50):Setting source as ['lsu_bypass.sv']
+WARNING:verifai:(11-29-2023 18:25:50):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:25:50):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:25:50):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:25:50):Using default end value None
+INFO:verifai:(11-29-2023 18:25:50):Running task tests
+INFO:verifai:(11-29-2023 18:25:50):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:25:50):generated master file: .verifaiws/lsu_bypass/.lsu_bypass_master_file.sv
+INFO:verifai:(11-29-2023 18:25:50):annotations {'Results': {'files': [{'name': '.verifaiws/lsu_bypass/.lsu_bypass_master_file.sv', 'annotations': [{'start': 26, 'end': 118, 'tag': 'module', 'name': 'lsu_bypass'}, {'start': 49, 'end': 93, 'tag': 'always', 'name': 'begin\n'}, {'start': 96, 'end': 102, 'tag': 'always', 'name': 'begin'}, {'start': 105, 'end': 117, 'tag': 'always', 'name': '@(posedge'}]}]}}
+INFO:verifai:(11-29-2023 18:25:50):annotations [93, 102, 117, 118]
+INFO:verifai:(11-29-2023 18:25:50):Chunk tokens is 438
+INFO:verifai:(11-29-2023 18:25:50):Chunk tokens is 21
+INFO:verifai:(11-29-2023 18:25:50):Chunk tokens is 41
+INFO:verifai:(11-29-2023 18:25:50):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:25:50):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:26:30):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:26:30):==================================================
+INFO:verifai:(11-29-2023 18:26:30):2023-11-29 18:26:30 - End Program
+INFO:verifai:(11-29-2023 18:26:30):Elapsed time: 39:866234 (Total)
+INFO:verifai:(11-29-2023 18:26:30):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:26:30):==================================================
+INFO:verifai:(11-29-2023 18:26:30):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:26:31):
+INFO:verifai:(11-29-2023 18:26:31):==================================================
+INFO:verifai:(11-29-2023 18:26:31):2023-11-29 18:26:31 - Starting Verifai
+INFO:verifai:(11-29-2023 18:26:31):==================================================
+INFO:verifai:(11-29-2023 18:26:31):Args: ['testguru', '-c', 'config.json', '-src', 'csr_buffer.sv']
+INFO:verifai:(11-29-2023 18:26:31):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:26:31):directory .verifaiws/csr_buffer created
+INFO:verifai:(11-29-2023 18:26:31):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:26:31):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:26:31):Checking for prompt
+INFO:verifai:(11-29-2023 18:26:31):Setting source as ['csr_buffer.sv']
+WARNING:verifai:(11-29-2023 18:26:31):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:26:31):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:26:31):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:26:31):Using default end value None
+INFO:verifai:(11-29-2023 18:26:31):Running task tests
+INFO:verifai:(11-29-2023 18:26:50):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:26:50):==================================================
+INFO:verifai:(11-29-2023 18:26:50):2023-11-29 18:26:50 - End Program
+INFO:verifai:(11-29-2023 18:26:50):Elapsed time: 18:518815 (Total)
+INFO:verifai:(11-29-2023 18:26:50):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:26:50):==================================================
+INFO:verifai:(11-29-2023 18:26:50):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:26:51):
+INFO:verifai:(11-29-2023 18:26:51):==================================================
+INFO:verifai:(11-29-2023 18:26:51):2023-11-29 18:26:51 - Starting Verifai
+INFO:verifai:(11-29-2023 18:26:51):==================================================
+INFO:verifai:(11-29-2023 18:26:51):Args: ['testguru', '-c', 'config.json', '-src', 'compressed_decoder.sv']
+INFO:verifai:(11-29-2023 18:26:51):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:26:51):directory .verifaiws/compressed_decoder created
+INFO:verifai:(11-29-2023 18:26:51):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:26:51):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:26:51):Checking for prompt
+INFO:verifai:(11-29-2023 18:26:51):Setting source as ['compressed_decoder.sv']
+WARNING:verifai:(11-29-2023 18:26:51):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:26:51):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:26:51):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:26:51):Using default end value None
+INFO:verifai:(11-29-2023 18:26:51):Running task tests
+INFO:verifai:(11-29-2023 18:26:51):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:26:51):generated master file: .verifaiws/compressed_decoder/.compressed_decoder_master_file.sv
+INFO:verifai:(11-29-2023 18:26:51):annotations {'Results': {'files': [{'name': '.verifaiws/compressed_decoder/.compressed_decoder_master_file.sv', 'annotations': [{'start': 22, 'end': 312, 'tag': 'module', 'name': 'compressed_decoder\n(\n'}, {'start': 33, 'end': 311, 'tag': 'always', 'name': 'begin\n'}, {'start': 41, 'end': 305, 'tag': 'case', 'name': 'case'}, {'start': 44, 'end': 101, 'tag': 'case', 'name': 'case'}, {'start': 106, 'end': 215, 'tag': 'case', 'name': 'case'}, {'start': 220, 'end': 300, 'tag': 'case', 'name': 'case'}, {'start': 149, 'end': 202, 'tag': 'case', 'name': 'case'}, {'start': 163, 'end': 200, 'tag': 'case', 'name': 'case'}]}]}}
+INFO:verifai:(11-29-2023 18:26:51):annotations [101, 200, 202, 215, 300, 305, 311, 312]
+INFO:verifai:(11-29-2023 18:26:51):Chunk tokens is 507
+INFO:verifai:(11-29-2023 18:26:51):Chunk tokens is 398
+INFO:verifai:(11-29-2023 18:26:51):Chunk tokens is 2
+INFO:verifai:(11-29-2023 18:26:51):Chunk tokens is 62
+INFO:verifai:(11-29-2023 18:26:51):Chunk tokens is 345
+INFO:verifai:(11-29-2023 18:26:51):Chunk tokens is 9
+INFO:verifai:(11-29-2023 18:26:51):Chunk tokens is 26
+INFO:verifai:(11-29-2023 18:26:51):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:26:51):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:26:52):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:26:52):==================================================
+INFO:verifai:(11-29-2023 18:26:52):2023-11-29 18:26:52 - End Program
+INFO:verifai:(11-29-2023 18:26:52):Elapsed time: 00:870009 (Total)
+INFO:verifai:(11-29-2023 18:26:52):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:26:52):==================================================
+INFO:verifai:(11-29-2023 18:26:52):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:26:54):
+INFO:verifai:(11-29-2023 18:26:54):==================================================
+INFO:verifai:(11-29-2023 18:26:54):2023-11-29 18:26:54 - Starting Verifai
+INFO:verifai:(11-29-2023 18:26:54):==================================================
+INFO:verifai:(11-29-2023 18:26:54):Args: ['testguru', '-c', 'config.json', '-src', 'amo_buffer.sv']
+INFO:verifai:(11-29-2023 18:26:54):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:26:54):directory .verifaiws/amo_buffer created
+INFO:verifai:(11-29-2023 18:26:54):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:26:54):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:26:54):Checking for prompt
+INFO:verifai:(11-29-2023 18:26:54):Setting source as ['amo_buffer.sv']
+WARNING:verifai:(11-29-2023 18:26:54):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:26:54):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:26:54):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:26:54):Using default end value None
+INFO:verifai:(11-29-2023 18:26:54):Running task tests
+INFO:verifai:(11-29-2023 18:27:12):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:27:12):==================================================
+INFO:verifai:(11-29-2023 18:27:12):2023-11-29 18:27:12 - End Program
+INFO:verifai:(11-29-2023 18:27:12):Elapsed time: 18:647615 (Total)
+INFO:verifai:(11-29-2023 18:27:12):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:27:12):==================================================
+INFO:verifai:(11-29-2023 18:27:13):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:27:14):
+INFO:verifai:(11-29-2023 18:27:14):==================================================
+INFO:verifai:(11-29-2023 18:27:14):2023-11-29 18:27:14 - Starting Verifai
+INFO:verifai:(11-29-2023 18:27:14):==================================================
+INFO:verifai:(11-29-2023 18:27:14):Args: ['testguru', '-c', 'config.json', '-src', 'fpu_wrap.sv']
+INFO:verifai:(11-29-2023 18:27:14):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:27:14):directory .verifaiws/fpu_wrap created
+INFO:verifai:(11-29-2023 18:27:14):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:27:14):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:27:14):Checking for prompt
+INFO:verifai:(11-29-2023 18:27:14):Setting source as ['fpu_wrap.sv']
+WARNING:verifai:(11-29-2023 18:27:14):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:27:14):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:27:14):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:27:14):Using default end value None
+INFO:verifai:(11-29-2023 18:27:14):Running task tests
+INFO:verifai:(11-29-2023 18:27:14):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:27:14):generated master file: .verifaiws/fpu_wrap/.fpu_wrap_master_file.sv
+INFO:verifai:(11-29-2023 18:27:14):annotations {'Results': {'files': [{'name': '.verifaiws/fpu_wrap/.fpu_wrap_master_file.sv', 'annotations': [{'start': 16, 'end': 550, 'tag': 'module', 'name': 'fpu_wrap'}, {'start': 104, 'end': 405, 'tag': 'always', 'name': 'begin'}, {'start': 412, 'end': 452, 'tag': 'always', 'name': 'begin'}, {'start': 455, 'end': 486, 'tag': 'always', 'name': '@(posedge'}, {'start': 134, 'end': 148, 'tag': 'case', 'name': 'case'}, {'start': 154, 'end': 380, 'tag': 'case', 'name': 'case'}, {'start': 421, 'end': 445, 'tag': 'case', 'name': 'case'}, {'start': 199, 'end': 204, 'tag': 'case', 'name': 'case'}, {'start': 221, 'end': 226, 'tag': 'case', 'name': 'case'}, {'start': 242, 'end': 247, 'tag': 'case', 'name': 'case'}, {'start': 250, 'end': 256, 'tag': 'case', 'name': 'case'}, {'start': 390, 'end': 395, 'tag': 'case', 'name': 'case'}, {'start': 397, 'end': 402, 'tag': 'case', 'name': 'case'}]}]}}
+INFO:verifai:(11-29-2023 18:27:14):annotations [148, 204, 226, 247, 256, 380, 395, 402, 405, 445, 452, 486, 550]
+INFO:verifai:(11-29-2023 18:27:14):Chunk tokens is 630
+INFO:verifai:(11-29-2023 18:27:14):Chunk tokens is 226
+INFO:verifai:(11-29-2023 18:27:14):Chunk tokens is 84
+INFO:verifai:(11-29-2023 18:27:14):Chunk tokens is 84
+INFO:verifai:(11-29-2023 18:27:14):Chunk tokens is 36
+INFO:verifai:(11-29-2023 18:27:14):Chunk tokens is 635
+INFO:verifai:(11-29-2023 18:27:14):Chunk tokens is 55
+INFO:verifai:(11-29-2023 18:27:14):Chunk tokens is 34
+INFO:verifai:(11-29-2023 18:27:14):Chunk tokens is 3
+INFO:verifai:(11-29-2023 18:27:14):Chunk tokens is 187
+INFO:verifai:(11-29-2023 18:27:14):Chunk tokens is 18
+INFO:verifai:(11-29-2023 18:27:14):Chunk tokens is 106
+INFO:verifai:(11-29-2023 18:27:14):Chunk tokens is 266
+INFO:verifai:(11-29-2023 18:27:14):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:27:14):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:27:14):==================================================
+INFO:verifai:(11-29-2023 18:27:14):2023-11-29 18:27:14 - End Program
+INFO:verifai:(11-29-2023 18:27:14):Elapsed time: 00:802603 (Total)
+INFO:verifai:(11-29-2023 18:27:14):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:27:14):==================================================
+INFO:verifai:(11-29-2023 18:27:15):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:27:16):
+INFO:verifai:(11-29-2023 18:27:16):==================================================
+INFO:verifai:(11-29-2023 18:27:16):2023-11-29 18:27:16 - Starting Verifai
+INFO:verifai:(11-29-2023 18:27:16):==================================================
+INFO:verifai:(11-29-2023 18:27:16):Args: ['testguru', '-c', 'config.json', '-src', 'store_buffer.sv']
+INFO:verifai:(11-29-2023 18:27:16):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:27:16):directory .verifaiws/store_buffer created
+INFO:verifai:(11-29-2023 18:27:16):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:27:16):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:27:16):Checking for prompt
+INFO:verifai:(11-29-2023 18:27:16):Setting source as ['store_buffer.sv']
+WARNING:verifai:(11-29-2023 18:27:16):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:27:16):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:27:16):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:27:16):Using default end value None
+INFO:verifai:(11-29-2023 18:27:16):Running task tests
+INFO:verifai:(11-29-2023 18:27:16):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:27:16):generated master file: .verifaiws/store_buffer/.store_buffer_master_file.sv
+INFO:verifai:(11-29-2023 18:27:16):annotations {'Results': {'files': [{'name': '.verifaiws/store_buffer/.store_buffer_master_file.sv', 'annotations': [{'start': 17, 'end': 276, 'tag': 'module', 'name': 'store_buffer'}, {'start': 72, 'end': 118, 'tag': 'always', 'name': 'begin'}, {'start': 140, 'end': 178, 'tag': 'always', 'name': 'begin'}, {'start': 195, 'end': 218, 'tag': 'always', 'name': 'begin'}, {'start': 222, 'end': 234, 'tag': 'always', 'name': '@(posedge'}, {'start': 237, 'end': 249, 'tag': 'always', 'name': '@(posedge'}]}]}}
+INFO:verifai:(11-29-2023 18:27:16):annotations [118, 178, 218, 234, 249, 276]
+INFO:verifai:(11-29-2023 18:27:16):Chunk tokens is 711
+INFO:verifai:(11-29-2023 18:27:16):Chunk tokens is 293
+INFO:verifai:(11-29-2023 18:27:16):Chunk tokens is 248
+INFO:verifai:(11-29-2023 18:27:16):Chunk tokens is 44
+INFO:verifai:(11-29-2023 18:27:16):Chunk tokens is 44
+INFO:verifai:(11-29-2023 18:27:16):Chunk tokens is 150
+INFO:verifai:(11-29-2023 18:27:16):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:27:16):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:27:16):==================================================
+INFO:verifai:(11-29-2023 18:27:16):2023-11-29 18:27:16 - End Program
+INFO:verifai:(11-29-2023 18:27:16):Elapsed time: 00:293471 (Total)
+INFO:verifai:(11-29-2023 18:27:16):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:27:16):==================================================
+INFO:verifai:(11-29-2023 18:27:17):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:27:18):
+INFO:verifai:(11-29-2023 18:27:18):==================================================
+INFO:verifai:(11-29-2023 18:27:18):2023-11-29 18:27:18 - Starting Verifai
+INFO:verifai:(11-29-2023 18:27:18):==================================================
+INFO:verifai:(11-29-2023 18:27:18):Args: ['testguru', '-c', 'config.json', '-src', 'mult.sv']
+INFO:verifai:(11-29-2023 18:27:18):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:27:18):directory .verifaiws/mult created
+INFO:verifai:(11-29-2023 18:27:18):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:27:18):Checking for prompt
+INFO:verifai:(11-29-2023 18:27:18):Setting source as ['mult.sv']
+WARNING:verifai:(11-29-2023 18:27:18):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:27:18):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:27:18):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:27:18):Using default end value None
+INFO:verifai:(11-29-2023 18:27:18):Running task tests
+INFO:verifai:(11-29-2023 18:27:18):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:27:18):generated master file: .verifaiws/mult/.mult_master_file.sv
+INFO:verifai:(11-29-2023 18:27:18):annotations {'Results': {'files': [{'name': '.verifaiws/mult/.mult_master_file.sv', 'annotations': [{'start': 3, 'end': 140, 'tag': 'module', 'name': 'mult'}, {'start': 74, 'end': 103, 'tag': 'always', 'name': 'begin\n'}, {'start': 133, 'end': 139, 'tag': 'always', 'name': '@(posedge'}]}]}}
+INFO:verifai:(11-29-2023 18:27:18):annotations [103, 139, 140]
+INFO:verifai:(11-29-2023 18:27:18):Chunk tokens is 459
+INFO:verifai:(11-29-2023 18:27:18):Chunk tokens is 137
+INFO:verifai:(11-29-2023 18:27:18):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:27:18):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:27:38):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:27:38):==================================================
+INFO:verifai:(11-29-2023 18:27:38):2023-11-29 18:27:38 - End Program
+INFO:verifai:(11-29-2023 18:27:38):Elapsed time: 19:706018 (Total)
+INFO:verifai:(11-29-2023 18:27:38):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:27:38):==================================================
+INFO:verifai:(11-29-2023 18:27:38):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:27:39):
+INFO:verifai:(11-29-2023 18:27:39):==================================================
+INFO:verifai:(11-29-2023 18:27:39):2023-11-29 18:27:39 - Starting Verifai
+INFO:verifai:(11-29-2023 18:27:39):==================================================
+INFO:verifai:(11-29-2023 18:27:39):Args: ['testguru', '-c', 'config.json', '-src', 'serdiv.sv']
+INFO:verifai:(11-29-2023 18:27:39):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:27:39):directory .verifaiws/serdiv created
+INFO:verifai:(11-29-2023 18:27:39):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:27:39):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:27:39):Checking for prompt
+INFO:verifai:(11-29-2023 18:27:39):Setting source as ['serdiv.sv']
+WARNING:verifai:(11-29-2023 18:27:39):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:27:39):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:27:39):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:27:39):Using default end value None
+INFO:verifai:(11-29-2023 18:27:39):Running task tests
+INFO:verifai:(11-29-2023 18:27:39):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:27:39):generated master file: .verifaiws/serdiv/.serdiv_master_file.sv
+INFO:verifai:(11-29-2023 18:27:39):annotations {'Results': {'files': [{'name': '.verifaiws/serdiv/.serdiv_master_file.sv', 'annotations': [{'start': 18, 'end': 257, 'tag': 'module', 'name': 'serdiv'}, {'start': 149, 'end': 208, 'tag': 'always', 'name': 'begin'}, {'start': 229, 'end': 255, 'tag': 'always', 'name': '@(posedge'}, {'start': 159, 'end': 198, 'tag': 'case', 'name': 'case'}]}]}}
+INFO:verifai:(11-29-2023 18:27:39):annotations [198, 208, 255, 257]
+INFO:verifai:(11-29-2023 18:27:39):Chunk tokens is 822
+INFO:verifai:(11-29-2023 18:27:39):Chunk tokens is 23
+INFO:verifai:(11-29-2023 18:27:39):Chunk tokens is 177
+INFO:verifai:(11-29-2023 18:27:39):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:27:39):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:27:40):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:27:40):==================================================
+INFO:verifai:(11-29-2023 18:27:40):2023-11-29 18:27:40 - End Program
+INFO:verifai:(11-29-2023 18:27:40):Elapsed time: 00:758857 (Total)
+INFO:verifai:(11-29-2023 18:27:40):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:27:40):==================================================
+INFO:verifai:(11-29-2023 18:27:40):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:27:41):
+INFO:verifai:(11-29-2023 18:27:41):==================================================
+INFO:verifai:(11-29-2023 18:27:41):2023-11-29 18:27:41 - Starting Verifai
+INFO:verifai:(11-29-2023 18:27:41):==================================================
+INFO:verifai:(11-29-2023 18:27:41):Args: ['testguru', '-c', 'config.json', '-src', 'scoreboard.sv']
+INFO:verifai:(11-29-2023 18:27:41):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:27:41):directory .verifaiws/scoreboard created
+INFO:verifai:(11-29-2023 18:27:41):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:27:41):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:27:41):Checking for prompt
+INFO:verifai:(11-29-2023 18:27:41):Setting source as ['scoreboard.sv']
+WARNING:verifai:(11-29-2023 18:27:41):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:27:41):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:27:41):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:27:41):Using default end value None
+INFO:verifai:(11-29-2023 18:27:41):Running task tests
+INFO:verifai:(11-29-2023 18:27:41):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:27:41):generated master file: .verifaiws/scoreboard/.scoreboard_master_file.sv
+INFO:verifai:(11-29-2023 18:27:41):annotations {'Results': {'files': [{'name': '.verifaiws/scoreboard/.scoreboard_master_file.sv', 'annotations': [{'start': 15, 'end': 446, 'tag': 'module', 'name': 'scoreboard'}, {'start': 97, 'end': 107, 'tag': 'always', 'name': 'begin\n'}, {'start': 110, 'end': 115, 'tag': 'always', 'name': 'begin'}, {'start': 118, 'end': 126, 'tag': 'always', 'name': 'begin\n'}, {'start': 130, 'end': 212, 'tag': 'always', 'name': 'begin'}, {'start': 239, 'end': 259, 'tag': 'always', 'name': 'begin'}, {'start': 397, 'end': 409, 'tag': 'always', 'name': '@(posedge'}]}]}}
+INFO:verifai:(11-29-2023 18:27:41):annotations [107, 115, 126, 212, 259, 409, 446]
+INFO:verifai:(11-29-2023 18:27:41):Chunk tokens is 553
+INFO:verifai:(11-29-2023 18:27:41):Chunk tokens is 28
+INFO:verifai:(11-29-2023 18:27:41):Chunk tokens is 90
+INFO:verifai:(11-29-2023 18:27:41):Chunk tokens is 383
+INFO:verifai:(11-29-2023 18:27:41):Chunk tokens is 184
+INFO:verifai:(11-29-2023 18:27:41):Chunk tokens is 560
+INFO:verifai:(11-29-2023 18:27:41):Chunk tokens is 227
+INFO:verifai:(11-29-2023 18:27:41):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:27:43):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:27:43):==================================================
+INFO:verifai:(11-29-2023 18:27:43):2023-11-29 18:27:43 - End Program
+INFO:verifai:(11-29-2023 18:27:43):Elapsed time: 01:545861 (Total)
+INFO:verifai:(11-29-2023 18:27:43):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:27:43):==================================================
+INFO:verifai:(11-29-2023 18:27:43):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:27:44):
+INFO:verifai:(11-29-2023 18:27:44):==================================================
+INFO:verifai:(11-29-2023 18:27:44):2023-11-29 18:27:44 - Starting Verifai
+INFO:verifai:(11-29-2023 18:27:44):==================================================
+INFO:verifai:(11-29-2023 18:27:44):Args: ['testguru', '-c', 'config.json', '-src', 're_name.sv']
+INFO:verifai:(11-29-2023 18:27:44):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:27:44):directory .verifaiws/re_name created
+INFO:verifai:(11-29-2023 18:27:44):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:27:44):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:27:44):Checking for prompt
+INFO:verifai:(11-29-2023 18:27:44):Setting source as ['re_name.sv']
+WARNING:verifai:(11-29-2023 18:27:44):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:27:44):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:27:44):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:27:44):Using default end value None
+INFO:verifai:(11-29-2023 18:27:44):Running task tests
+INFO:verifai:(11-29-2023 18:28:03):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:28:03):==================================================
+INFO:verifai:(11-29-2023 18:28:03):2023-11-29 18:28:03 - End Program
+INFO:verifai:(11-29-2023 18:28:03):Elapsed time: 19:141607 (Total)
+INFO:verifai:(11-29-2023 18:28:03):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:28:03):==================================================
+INFO:verifai:(11-29-2023 18:28:04):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:28:05):
+INFO:verifai:(11-29-2023 18:28:05):==================================================
+INFO:verifai:(11-29-2023 18:28:05):2023-11-29 18:28:05 - Starting Verifai
+INFO:verifai:(11-29-2023 18:28:05):==================================================
+INFO:verifai:(11-29-2023 18:28:05):Args: ['testguru', '-c', 'config.json', '-src', 'instr_realign.sv']
+INFO:verifai:(11-29-2023 18:28:05):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:28:05):directory .verifaiws/instr_realign created
+INFO:verifai:(11-29-2023 18:28:05):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:28:05):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:28:05):Checking for prompt
+INFO:verifai:(11-29-2023 18:28:05):Setting source as ['instr_realign.sv']
+WARNING:verifai:(11-29-2023 18:28:05):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:28:05):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:28:05):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:28:05):Using default end value None
+INFO:verifai:(11-29-2023 18:28:05):Running task tests
+INFO:verifai:(11-29-2023 18:28:05):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:28:05):generated master file: .verifaiws/instr_realign/.instr_realign_master_file.sv
+INFO:verifai:(11-29-2023 18:28:05):annotations {'Results': {'files': [{'name': '.verifaiws/instr_realign/.instr_realign_master_file.sv', 'annotations': [{'start': 23, 'end': 357, 'tag': 'module', 'name': 'instr_realign'}, {'start': 339, 'end': 356, 'tag': 'always', 'name': '@(posedge'}, {'start': 54, 'end': 101, 'tag': 'always', 'name': 'begin'}, {'start': 107, 'end': 336, 'tag': 'always', 'name': 'begin'}, {'start': 245, 'end': 335, 'tag': 'case', 'name': '(address_i[2'}]}]}}
+INFO:verifai:(11-29-2023 18:28:05):annotations [101, 335, 336, 356, 357]
+INFO:verifai:(11-29-2023 18:28:05):Chunk tokens is 593
+INFO:verifai:(11-29-2023 18:28:05):Chunk tokens is 986
+INFO:verifai:(11-29-2023 18:28:05):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:28:05):Chunk tokens is 50
+INFO:verifai:(11-29-2023 18:28:05):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:28:05):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:28:05):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:28:05):==================================================
+INFO:verifai:(11-29-2023 18:28:05):2023-11-29 18:28:05 - End Program
+INFO:verifai:(11-29-2023 18:28:05):Elapsed time: 00:299603 (Total)
+INFO:verifai:(11-29-2023 18:28:05):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:28:05):==================================================
+INFO:verifai:(11-29-2023 18:28:06):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:28:07):
+INFO:verifai:(11-29-2023 18:28:07):==================================================
+INFO:verifai:(11-29-2023 18:28:07):2023-11-29 18:28:07 - Starting Verifai
+INFO:verifai:(11-29-2023 18:28:07):==================================================
+INFO:verifai:(11-29-2023 18:28:07):Args: ['testguru', '-c', 'config.json', '-src', 'ariane.sv']
+INFO:verifai:(11-29-2023 18:28:07):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:28:07):directory .verifaiws/ariane created
+INFO:verifai:(11-29-2023 18:28:07):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:28:07):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:28:07):Checking for prompt
+INFO:verifai:(11-29-2023 18:28:07):Setting source as ['ariane.sv']
+WARNING:verifai:(11-29-2023 18:28:07):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:28:07):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:28:07):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:28:07):Using default end value None
+INFO:verifai:(11-29-2023 18:28:07):Running task tests
+INFO:verifai:(11-29-2023 18:28:23):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:28:23):==================================================
+INFO:verifai:(11-29-2023 18:28:23):2023-11-29 18:28:23 - End Program
+INFO:verifai:(11-29-2023 18:28:23):Elapsed time: 15:825525 (Total)
+INFO:verifai:(11-29-2023 18:28:23):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:28:23):==================================================
+INFO:verifai:(11-29-2023 18:28:23):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:28:24):
+INFO:verifai:(11-29-2023 18:28:24):==================================================
+INFO:verifai:(11-29-2023 18:28:24):2023-11-29 18:28:24 - Starting Verifai
+INFO:verifai:(11-29-2023 18:28:24):==================================================
+INFO:verifai:(11-29-2023 18:28:24):Args: ['testguru', '-c', 'config.json', '-src', 'ariane_regfile.sv']
+INFO:verifai:(11-29-2023 18:28:24):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:28:24):directory .verifaiws/ariane_regfile created
+INFO:verifai:(11-29-2023 18:28:24):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:28:24):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:28:24):Checking for prompt
+INFO:verifai:(11-29-2023 18:28:24):Setting source as ['ariane_regfile.sv']
+WARNING:verifai:(11-29-2023 18:28:24):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:28:24):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:28:24):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:28:24):Using default end value None
+INFO:verifai:(11-29-2023 18:28:24):Running task tests
+INFO:verifai:(11-29-2023 18:28:24):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:28:24):generated master file: .verifaiws/ariane_regfile/.ariane_regfile_master_file.sv
+INFO:verifai:(11-29-2023 18:28:24):annotations {'Results': {'files': [{'name': '.verifaiws/ariane_regfile/.ariane_regfile_master_file.sv', 'annotations': [{'start': 26, 'end': 120, 'tag': 'module', 'name': 'ariane_regfile_lol'}, {'start': 60, 'end': 71, 'tag': 'always', 'name': '@(posedge'}, {'start': 74, 'end': 83, 'tag': 'always', 'name': 'begin'}, {'start': 108, 'end': 119, 'tag': 'always', 'name': 'begin'}]}]}}
+INFO:verifai:(11-29-2023 18:28:24):annotations [71, 83, 119, 120]
+INFO:verifai:(11-29-2023 18:28:24):Chunk tokens is 335
+INFO:verifai:(11-29-2023 18:28:24):Chunk tokens is 51
+INFO:verifai:(11-29-2023 18:28:24):Chunk tokens is 170
+INFO:verifai:(11-29-2023 18:28:24):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:28:24):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:28:38):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:28:38):==================================================
+INFO:verifai:(11-29-2023 18:28:38):2023-11-29 18:28:38 - End Program
+INFO:verifai:(11-29-2023 18:28:38):Elapsed time: 14:048501 (Total)
+INFO:verifai:(11-29-2023 18:28:38):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:28:38):==================================================
+INFO:verifai:(11-29-2023 18:28:38):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:28:40):
+INFO:verifai:(11-29-2023 18:28:40):==================================================
+INFO:verifai:(11-29-2023 18:28:40):2023-11-29 18:28:40 - Starting Verifai
+INFO:verifai:(11-29-2023 18:28:40):==================================================
+INFO:verifai:(11-29-2023 18:28:40):Args: ['testguru', '-c', 'config.json', '-src', 'id_stage.sv']
+INFO:verifai:(11-29-2023 18:28:40):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:28:40):directory .verifaiws/id_stage created
+INFO:verifai:(11-29-2023 18:28:40):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:28:40):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:28:40):Checking for prompt
+INFO:verifai:(11-29-2023 18:28:40):Setting source as ['id_stage.sv']
+WARNING:verifai:(11-29-2023 18:28:40):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:28:40):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:28:40):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:28:40):Using default end value None
+INFO:verifai:(11-29-2023 18:28:40):Running task tests
+INFO:verifai:(11-29-2023 18:28:40):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:28:40):generated master file: .verifaiws/id_stage/.id_stage_master_file.sv
+INFO:verifai:(11-29-2023 18:28:40):annotations {'Results': {'files': [{'name': '.verifaiws/id_stage/.id_stage_master_file.sv', 'annotations': [{'start': 16, 'end': 134, 'tag': 'module', 'name': 'id_stage'}, {'start': 104, 'end': 123, 'tag': 'always', 'name': 'begin\n'}, {'start': 127, 'end': 133, 'tag': 'always', 'name': '@(posedge'}]}]}}
+INFO:verifai:(11-29-2023 18:28:40):annotations [123, 133, 134]
+INFO:verifai:(11-29-2023 18:28:40):Chunk tokens is 523
+INFO:verifai:(11-29-2023 18:28:40):Chunk tokens is 29
+INFO:verifai:(11-29-2023 18:28:40):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:28:40):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:29:15):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:29:15):==================================================
+INFO:verifai:(11-29-2023 18:29:15):2023-11-29 18:29:15 - End Program
+INFO:verifai:(11-29-2023 18:29:15):Elapsed time: 35:327700 (Total)
+INFO:verifai:(11-29-2023 18:29:15):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:29:15):==================================================
+INFO:verifai:(11-29-2023 18:29:15):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:29:16):
+INFO:verifai:(11-29-2023 18:29:16):==================================================
+INFO:verifai:(11-29-2023 18:29:16):2023-11-29 18:29:16 - Starting Verifai
+INFO:verifai:(11-29-2023 18:29:16):==================================================
+INFO:verifai:(11-29-2023 18:29:16):Args: ['testguru', '-c', 'config.json', '-src', 'commit_stage.sv']
+INFO:verifai:(11-29-2023 18:29:16):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:29:16):directory .verifaiws/commit_stage created
+INFO:verifai:(11-29-2023 18:29:16):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:29:16):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:29:16):Checking for prompt
+INFO:verifai:(11-29-2023 18:29:16):Setting source as ['commit_stage.sv']
+WARNING:verifai:(11-29-2023 18:29:16):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:29:16):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:29:16):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:29:16):Using default end value None
+INFO:verifai:(11-29-2023 18:29:16):Running task tests
+INFO:verifai:(11-29-2023 18:29:16):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:29:16):generated master file: .verifaiws/commit_stage/.commit_stage_master_file.sv
+INFO:verifai:(11-29-2023 18:29:16):annotations {'Results': {'files': [{'name': '.verifaiws/commit_stage/.commit_stage_master_file.sv', 'annotations': [{'start': 16, 'end': 290, 'tag': 'module', 'name': 'commit_stage'}, {'start': 77, 'end': 82, 'tag': 'always', 'name': 'begin'}, {'start': 92, 'end': 250, 'tag': 'always', 'name': 'begin'}, {'start': 256, 'end': 289, 'tag': 'always', 'name': 'begin'}]}]}}
+INFO:verifai:(11-29-2023 18:29:16):annotations [82, 250, 289, 290]
+INFO:verifai:(11-29-2023 18:29:16):Chunk tokens is 586
+INFO:verifai:(11-29-2023 18:29:16):Chunk tokens is 730
+INFO:verifai:(11-29-2023 18:29:16):Chunk tokens is 206
+INFO:verifai:(11-29-2023 18:29:16):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:29:16):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:29:17):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:29:17):==================================================
+INFO:verifai:(11-29-2023 18:29:17):2023-11-29 18:29:17 - End Program
+INFO:verifai:(11-29-2023 18:29:17):Elapsed time: 00:782100 (Total)
+INFO:verifai:(11-29-2023 18:29:17):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:29:17):==================================================
+INFO:verifai:(11-29-2023 18:29:18):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:29:19):
+INFO:verifai:(11-29-2023 18:29:19):==================================================
+INFO:verifai:(11-29-2023 18:29:19):2023-11-29 18:29:19 - Starting Verifai
+INFO:verifai:(11-29-2023 18:29:19):==================================================
+INFO:verifai:(11-29-2023 18:29:19):Args: ['testguru', '-c', 'config.json', '-src', 'ex_stage.sv']
+INFO:verifai:(11-29-2023 18:29:19):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:29:19):directory .verifaiws/ex_stage created
+INFO:verifai:(11-29-2023 18:29:19):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:29:19):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:29:19):Checking for prompt
+INFO:verifai:(11-29-2023 18:29:19):Setting source as ['ex_stage.sv']
+WARNING:verifai:(11-29-2023 18:29:19):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:29:19):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:29:19):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:29:19):Using default end value None
+INFO:verifai:(11-29-2023 18:29:19):Running task tests
+INFO:verifai:(11-29-2023 18:29:19):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:29:19):generated master file: .verifaiws/ex_stage/.ex_stage_master_file.sv
+INFO:verifai:(11-29-2023 18:29:19):annotations {'Results': {'files': [{'name': '.verifaiws/ex_stage/.ex_stage_master_file.sv', 'annotations': [{'start': 17, 'end': 393, 'tag': 'module', 'name': 'ex_stage'}, {'start': 213, 'end': 227, 'tag': 'always', 'name': 'begin\n'}, {'start': 230, 'end': 232, 'tag': 'always', 'name': 'begin\n'}, {'start': 369, 'end': 379, 'tag': 'always', 'name': '@(posedge'}, {'start': 382, 'end': 391, 'tag': 'always', 'name': '@(posedge'}]}]}}
+INFO:verifai:(11-29-2023 18:29:19):annotations [227, 232, 379, 391, 393]
+INFO:verifai:(11-29-2023 18:29:19):Chunk tokens is 1027
+INFO:verifai:(11-29-2023 18:29:19):Chunk tokens is 13
+INFO:verifai:(11-29-2023 18:29:19):Chunk tokens is 303
+INFO:verifai:(11-29-2023 18:29:19):Chunk tokens is 66
+INFO:verifai:(11-29-2023 18:29:19):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:29:19):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:29:19):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:29:19):==================================================
+INFO:verifai:(11-29-2023 18:29:19):2023-11-29 18:29:19 - End Program
+INFO:verifai:(11-29-2023 18:29:19):Elapsed time: 00:762088 (Total)
+INFO:verifai:(11-29-2023 18:29:19):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:29:19):==================================================
+INFO:verifai:(11-29-2023 18:29:20):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:29:21):
+INFO:verifai:(11-29-2023 18:29:21):==================================================
+INFO:verifai:(11-29-2023 18:29:21):2023-11-29 18:29:21 - Starting Verifai
+INFO:verifai:(11-29-2023 18:29:21):==================================================
+INFO:verifai:(11-29-2023 18:29:21):Args: ['testguru', '-c', 'config.json', '-src', 'multiplier.sv']
+INFO:verifai:(11-29-2023 18:29:21):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:29:21):directory .verifaiws/multiplier created
+INFO:verifai:(11-29-2023 18:29:21):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:29:21):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:29:21):Checking for prompt
+INFO:verifai:(11-29-2023 18:29:21):Setting source as ['multiplier.sv']
+WARNING:verifai:(11-29-2023 18:29:21):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:29:21):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:29:21):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:29:21):Using default end value None
+INFO:verifai:(11-29-2023 18:29:21):Running task tests
+INFO:verifai:(11-29-2023 18:29:21):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:29:21):generated master file: .verifaiws/multiplier/.multiplier_master_file.sv
+INFO:verifai:(11-29-2023 18:29:21):annotations {'Results': {'files': [{'name': '.verifaiws/multiplier/.multiplier_master_file.sv', 'annotations': [{'start': 18, 'end': 148, 'tag': 'module', 'name': 'multiplier'}, {'start': 82, 'end': 98, 'tag': 'always', 'name': 'begin\n'}, {'start': 108, 'end': 118, 'tag': 'always', 'name': 'begin'}, {'start': 133, 'end': 147, 'tag': 'always', 'name': '@(posedge'}, {'start': 109, 'end': 117, 'tag': 'case', 'name': 'case'}, {'start': 51, 'end': 56, 'tag': 'always', 'name': 'begin\n'}, {'start': 120, 'end': 128, 'tag': 'always', 'name': '@(posedge'}]}]}}
+INFO:verifai:(11-29-2023 18:29:21):annotations [56, 98, 117, 118, 128, 147, 148]
+INFO:verifai:(11-29-2023 18:29:21):Chunk tokens is 296
+INFO:verifai:(11-29-2023 18:29:21):Chunk tokens is 130
+INFO:verifai:(11-29-2023 18:29:21):Chunk tokens is 74
+INFO:verifai:(11-29-2023 18:29:21):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:29:21):Chunk tokens is 30
+INFO:verifai:(11-29-2023 18:29:21):Chunk tokens is 54
+INFO:verifai:(11-29-2023 18:29:21):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:29:21):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:29:48):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:29:48):==================================================
+INFO:verifai:(11-29-2023 18:29:48):2023-11-29 18:29:48 - End Program
+INFO:verifai:(11-29-2023 18:29:48):Elapsed time: 27:228546 (Total)
+INFO:verifai:(11-29-2023 18:29:48):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:29:48):==================================================
+INFO:verifai:(11-29-2023 18:29:49):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:29:50):
+INFO:verifai:(11-29-2023 18:29:50):==================================================
+INFO:verifai:(11-29-2023 18:29:50):2023-11-29 18:29:50 - Starting Verifai
+INFO:verifai:(11-29-2023 18:29:50):==================================================
+INFO:verifai:(11-29-2023 18:29:50):Args: ['testguru', '-c', 'config.json', '-src', 'cvxif_fu.sv']
+INFO:verifai:(11-29-2023 18:29:50):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:29:50):directory .verifaiws/cvxif_fu created
+INFO:verifai:(11-29-2023 18:29:50):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:29:50):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:29:50):Checking for prompt
+INFO:verifai:(11-29-2023 18:29:50):Setting source as ['cvxif_fu.sv']
+WARNING:verifai:(11-29-2023 18:29:50):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:29:50):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:29:50):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:29:50):Using default end value None
+INFO:verifai:(11-29-2023 18:29:50):Running task tests
+INFO:verifai:(11-29-2023 18:30:13):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:30:13):==================================================
+INFO:verifai:(11-29-2023 18:30:13):2023-11-29 18:30:13 - End Program
+INFO:verifai:(11-29-2023 18:30:13):Elapsed time: 23:139357 (Total)
+INFO:verifai:(11-29-2023 18:30:13):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:30:13):==================================================
+INFO:verifai:(11-29-2023 18:30:13):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:30:14):
+INFO:verifai:(11-29-2023 18:30:14):==================================================
+INFO:verifai:(11-29-2023 18:30:14):2023-11-29 18:30:14 - Starting Verifai
+INFO:verifai:(11-29-2023 18:30:14):==================================================
+INFO:verifai:(11-29-2023 18:30:14):Args: ['testguru', '-c', 'config.json', '-src', 'store_unit.sv']
+INFO:verifai:(11-29-2023 18:30:14):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:30:14):directory .verifaiws/store_unit created
+INFO:verifai:(11-29-2023 18:30:14):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:30:14):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:30:14):Checking for prompt
+INFO:verifai:(11-29-2023 18:30:14):Setting source as ['store_unit.sv']
+WARNING:verifai:(11-29-2023 18:30:14):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:30:14):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:30:14):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:30:14):Using default end value None
+INFO:verifai:(11-29-2023 18:30:14):Running task tests
+INFO:verifai:(11-29-2023 18:30:14):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:30:14):generated master file: .verifaiws/store_unit/.store_unit_master_file.sv
+INFO:verifai:(11-29-2023 18:30:14):annotations {'Results': {'files': [{'name': '.verifaiws/store_unit/.store_unit_master_file.sv', 'annotations': [{'start': 16, 'end': 278, 'tag': 'module', 'name': 'store_unit'}, {'start': 77, 'end': 174, 'tag': 'always', 'name': 'begin'}, {'start': 180, 'end': 201, 'tag': 'always', 'name': 'begin\n'}, {'start': 260, 'end': 276, 'tag': 'always', 'name': '@(posedge'}, {'start': 87, 'end': 158, 'tag': 'case', 'name': '(state_q)\n'}, {'start': 187, 'end': 200, 'tag': 'case', 'name': '(lsu_ctrl_i.operator)\n'}]}]}}
+INFO:verifai:(11-29-2023 18:30:14):annotations [158, 174, 200, 201, 276, 278]
+INFO:verifai:(11-29-2023 18:30:14):Chunk tokens is 632
+INFO:verifai:(11-29-2023 18:30:14):Chunk tokens is 60
+INFO:verifai:(11-29-2023 18:30:14):Chunk tokens is 124
+INFO:verifai:(11-29-2023 18:30:14):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:30:14):Chunk tokens is 241
+INFO:verifai:(11-29-2023 18:30:14):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:30:14):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:30:20):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:30:20):==================================================
+INFO:verifai:(11-29-2023 18:30:20):2023-11-29 18:30:20 - End Program
+INFO:verifai:(11-29-2023 18:30:20):Elapsed time: 05:786291 (Total)
+INFO:verifai:(11-29-2023 18:30:20):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:30:20):==================================================
+INFO:verifai:(11-29-2023 18:30:20):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:30:21):
+INFO:verifai:(11-29-2023 18:30:21):==================================================
+INFO:verifai:(11-29-2023 18:30:21):2023-11-29 18:30:21 - Starting Verifai
+INFO:verifai:(11-29-2023 18:30:21):==================================================
+INFO:verifai:(11-29-2023 18:30:21):Args: ['testguru', '-c', 'config.json', '-src', 'issue_read_operands.sv']
+INFO:verifai:(11-29-2023 18:30:21):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:30:21):directory .verifaiws/issue_read_operands created
+INFO:verifai:(11-29-2023 18:30:21):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:30:21):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:30:21):Checking for prompt
+INFO:verifai:(11-29-2023 18:30:21):Setting source as ['issue_read_operands.sv']
+WARNING:verifai:(11-29-2023 18:30:21):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:30:21):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:30:21):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:30:21):Using default end value None
+INFO:verifai:(11-29-2023 18:30:21):Running task tests
+INFO:verifai:(11-29-2023 18:30:21):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:30:21):generated master file: .verifaiws/issue_read_operands/.issue_read_operands_master_file.sv
+INFO:verifai:(11-29-2023 18:30:22):annotations {'Results': {'files': [{'name': '.verifaiws/issue_read_operands/.issue_read_operands_master_file.sv', 'annotations': [{'start': 17, 'end': 506, 'tag': 'module', 'name': 'issue_read_operands'}, {'start': 137, 'end': 152, 'tag': 'always', 'name': 'begin'}, {'start': 159, 'end': 206, 'tag': 'always', 'name': 'begin'}, {'start': 209, 'end': 252, 'tag': 'always', 'name': 'begin'}, {'start': 256, 'end': 319, 'tag': 'always', 'name': '@(posedge'}, {'start': 349, 'end': 391, 'tag': 'always', 'name': 'begin'}, {'start': 469, 'end': 491, 'tag': 'always', 'name': '@(posedge'}, {'start': 138, 'end': 151, 'tag': 'case', 'name': 'case'}, {'start': 322, 'end': 343, 'tag': 'always', 'name': '@(posedge'}, {'start': 279, 'end': 306, 'tag': 'case', 'name': '(issue_instr_i.fu)\n'}, {'start': 330, 'end': 336, 'tag': 'case', 'name': '(issue_instr_i.fu)\n'}]}]}}
+INFO:verifai:(11-29-2023 18:30:22):annotations [151, 152, 206, 252, 306, 319, 336, 343, 391, 491, 506]
+INFO:verifai:(11-29-2023 18:30:22):Chunk tokens is 687
+INFO:verifai:(11-29-2023 18:30:22):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:30:22):Chunk tokens is 330
+INFO:verifai:(11-29-2023 18:30:22):Chunk tokens is 206
+INFO:verifai:(11-29-2023 18:30:22):Chunk tokens is 201
+INFO:verifai:(11-29-2023 18:30:22):Chunk tokens is 48
+INFO:verifai:(11-29-2023 18:30:22):Chunk tokens is 48
+INFO:verifai:(11-29-2023 18:30:22):Chunk tokens is 13
+INFO:verifai:(11-29-2023 18:30:22):Chunk tokens is 317
+INFO:verifai:(11-29-2023 18:30:22):Chunk tokens is 333
+INFO:verifai:(11-29-2023 18:30:22):Chunk tokens is 63
+INFO:verifai:(11-29-2023 18:30:22):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:30:22):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:30:22):==================================================
+INFO:verifai:(11-29-2023 18:30:22):2023-11-29 18:30:22 - End Program
+INFO:verifai:(11-29-2023 18:30:22):Elapsed time: 00:332134 (Total)
+INFO:verifai:(11-29-2023 18:30:22):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:30:22):==================================================
+INFO:verifai:(11-29-2023 18:30:22):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:30:23):
+INFO:verifai:(11-29-2023 18:30:23):==================================================
+INFO:verifai:(11-29-2023 18:30:23):2023-11-29 18:30:23 - Starting Verifai
+INFO:verifai:(11-29-2023 18:30:23):==================================================
+INFO:verifai:(11-29-2023 18:30:23):Args: ['testguru', '-c', 'config.json', '-src', 'alu.sv']
+INFO:verifai:(11-29-2023 18:30:23):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:30:23):directory .verifaiws/alu created
+INFO:verifai:(11-29-2023 18:30:23):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:30:23):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:30:23):Checking for prompt
+INFO:verifai:(11-29-2023 18:30:23):Setting source as ['alu.sv']
+WARNING:verifai:(11-29-2023 18:30:23):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:30:23):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:30:23):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:30:23):Using default end value None
+INFO:verifai:(11-29-2023 18:30:23):Running task tests
+INFO:verifai:(11-29-2023 18:30:23):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:30:23):generated master file: .verifaiws/alu/.alu_master_file.sv
+INFO:verifai:(11-29-2023 18:30:23):annotations {'Results': {'files': [{'name': '.verifaiws/alu/.alu_master_file.sv', 'annotations': [{'start': 21, 'end': 299, 'tag': 'module', 'name': 'alu'}, {'start': 61, 'end': 71, 'tag': 'always', 'name': 'begin\n'}, {'start': 73, 'end': 90, 'tag': 'always', 'name': 'begin\n'}, {'start': 105, 'end': 115, 'tag': 'always', 'name': 'begin'}, {'start': 176, 'end': 188, 'tag': 'always', 'name': 'begin\n'}, {'start': 224, 'end': 298, 'tag': 'always', 'name': 'begin\n'}, {'start': 64, 'end': 70, 'tag': 'case', 'name': 'case'}, {'start': 108, 'end': 114, 'tag': 'case', 'name': '(fu_data_i.operator)\n'}, {'start': 226, 'end': 250, 'tag': 'case', 'name': 'case'}, {'start': 77, 'end': 88, 'tag': 'case', 'name': 'case'}, {'start': 260, 'end': 296, 'tag': 'case', 'name': 'case'}]}]}}
+INFO:verifai:(11-29-2023 18:30:23):annotations [70, 71, 88, 90, 114, 115, 188, 250, 296, 298, 299]
+INFO:verifai:(11-29-2023 18:30:23):Chunk tokens is 314
+INFO:verifai:(11-29-2023 18:30:23):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:30:23):Chunk tokens is 74
+INFO:verifai:(11-29-2023 18:30:23):Chunk tokens is 2
+INFO:verifai:(11-29-2023 18:30:23):Chunk tokens is 86
+INFO:verifai:(11-29-2023 18:30:23):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:30:23):Chunk tokens is 259
+INFO:verifai:(11-29-2023 18:30:23):Chunk tokens is 180
+INFO:verifai:(11-29-2023 18:30:23):Chunk tokens is 284
+INFO:verifai:(11-29-2023 18:30:23):Chunk tokens is 2
+INFO:verifai:(11-29-2023 18:30:23):Chunk tokens is 1
+INFO:verifai:(11-29-2023 18:30:23):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:30:24):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:30:24):==================================================
+INFO:verifai:(11-29-2023 18:30:24):2023-11-29 18:30:24 - End Program
+INFO:verifai:(11-29-2023 18:30:24):Elapsed time: 00:322470 (Total)
+INFO:verifai:(11-29-2023 18:30:24):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:30:24):==================================================
+INFO:verifai:(11-29-2023 18:30:24):Current Verifai version: 0.999.1119
+INFO:verifai:(11-29-2023 18:30:25):
+INFO:verifai:(11-29-2023 18:30:25):==================================================
+INFO:verifai:(11-29-2023 18:30:25):2023-11-29 18:30:25 - Starting Verifai
+INFO:verifai:(11-29-2023 18:30:25):==================================================
+INFO:verifai:(11-29-2023 18:30:25):Args: ['testguru', '-c', 'config.json', '-src', 'issue_stage.sv']
+INFO:verifai:(11-29-2023 18:30:25):Setting lang as systemverilog
+INFO:verifai:(11-29-2023 18:30:25):directory .verifaiws/issue_stage created
+INFO:verifai:(11-29-2023 18:30:25):Setting mode as verifai
+INFO:verifai:(11-29-2023 18:30:25):Setting model as verifai-7b-testguru
+INFO:verifai:(11-29-2023 18:30:25):Checking for prompt
+INFO:verifai:(11-29-2023 18:30:25):Setting source as ['issue_stage.sv']
+WARNING:verifai:(11-29-2023 18:30:25):Could not find 'start' in config
+INFO:verifai:(11-29-2023 18:30:25):Using default start value  None 
+WARNING:verifai:(11-29-2023 18:30:25):Could not find 'end' in config
+INFO:verifai:(11-29-2023 18:30:25):Using default end value None
+INFO:verifai:(11-29-2023 18:30:25):Running task tests
+INFO:verifai:(11-29-2023 18:30:25):skipping processing imports, language=systemverilog
+INFO:verifai:(11-29-2023 18:30:25):generated master file: .verifaiws/issue_stage/.issue_stage_master_file.sv
+INFO:verifai:(11-29-2023 18:30:25):annotations {'Results': {'files': [{'name': '.verifaiws/issue_stage/.issue_stage_master_file.sv', 'annotations': [{'start': 17, 'end': 213, 'tag': 'module', 'name': 'issue_stage'}]}]}}
+INFO:verifai:(11-29-2023 18:30:25):annotations [213]
+INFO:verifai:(11-29-2023 18:30:25):Chunk tokens is 775
+INFO:verifai:(11-29-2023 18:30:25):Multi proc is set to False
+INFO:verifai:(11-29-2023 18:30:25):Printing Execution Time Summary...
+INFO:verifai:(11-29-2023 18:30:25):==================================================
+INFO:verifai:(11-29-2023 18:30:25):2023-11-29 18:30:25 - End Program
+INFO:verifai:(11-29-2023 18:30:25):Elapsed time: 00:264899 (Total)
+INFO:verifai:(11-29-2023 18:30:25):--------------------------------------------------
+INFO:verifai:(11-29-2023 18:30:25):==================================================
+running file load_store_unit.sv
+running file cva6.sv
+running file decoder.sv
+running file axi_adapter.sv
+running file load_unit.sv
+running file csr_regfile.sv
+running file perf_counters.sv
+running file controller.sv
+running file dromajo_ram.sv
+running file axi_shim.sv
+running file ariane_regfile_ff.sv
+running file branch_unit.sv
+running file lsu_bypass.sv
+running file csr_buffer.sv
+running file compressed_decoder.sv
+running file amo_buffer.sv
+running file fpu_wrap.sv
+running file store_buffer.sv
+running file mult.sv
+running file serdiv.sv
+running file scoreboard.sv
+running file re_name.sv
+running file instr_realign.sv
+running file ariane.sv
+running file ariane_regfile.sv
+running file id_stage.sv
+running file commit_stage.sv
+running file ex_stage.sv
+running file multiplier.sv
+running file cvxif_fu.sv
+running file store_unit.sv
+running file issue_read_operands.sv
+running file alu.sv
+running file issue_stage.sv
