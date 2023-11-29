@@ -1,60 +1,78 @@
-# VerifAI TestGuru
-# tests for: mult.sv
-```
+ // VerifAI TestGuru
+ // tests for: mult.sv
+
+// Testbench for mult.sv
+
 module mult_tb;
 
+    typedef struct { 
+        logic operator; 
+        logic [31:0] operand_a; 
+        logic [31:0] operand_b; 
+    } fu_data_t;
+
     logic clk;
-    logic rst_ni;
-    logic flush_i;
-    fu_data_t fu_data_i;
-    logic mult_valid_i;
-    logic [riscv::XLEN-1:0] result_o;
+    logic rst;
+    logic flush;
+    fu_data_t fu_data;
+    logic mult_valid;
+    riscv::xlen_t result;
     logic mult_valid_o;
     logic mult_ready_o;
     logic [TRANS_ID_BITS-1:0] mult_trans_id_o;
 
     mult mult_i (
-        .clk_i,
-        .rst_ni,
-        .flush_i,
-        .fu_data_i,
-        .mult_valid_i,
-        .result_o,
-        .mult_valid_o,
-        .mult_ready_o,
-        .mult_trans_id_o
+        .clk_i(clk),
+        .rst_ni(rst),
+        .flush_i(flush),
+        .fu_data_i(fu_data),
+        .mult_valid_i(mult_valid),
+        .result_o(result),
+        .mult_valid_o(mult_valid_o),
+        .mult_ready_o(mult_ready_o),
+        .mult_trans_id_o(mult_trans_id_o)
     );
 
     initial begin
-        clk = 1'b0;
-        forever #5 clk = ~clk;
-    end
+        // Initialize all signals
+        clk = 0;
+        rst = 1;
+        flush = 0;
+        fu_data = '0;
+        mult_valid = 0;
+        result = '0;
+        mult_valid_o = 0;
+        mult_ready_o = 0;
+        mult_trans_id_o = '0;
 
-    initial begin
-        rst_ni = 1'b1;
-        #10;
-        rst_ni = 1'b0;
-
-        // send a multiplication request
-        fu_data_i.operator = MUL;
-        fu_data_i.operand_a = 'h12345678;
-        fu_data_i.operand_b = 'h12345678;
-        fu_data_i.trans_id = 1;
-        mult_valid_i = 1'b1;
-        #10;
-        mult_valid_i = 1'b0;
-
-        // send a division request
-        fu_data_i.operator = DIV;
-        fu_data_i.operand_a = 'h12345678;
-        fu_data_i.operand_b = 'h12345678;
-        fu_data_i.trans_id = 2;
-        mult_valid_i = 1'b1;
-        #10;
-        mult_valid_i = 1'b0;
-
+        // Wait for 100ns
         #100;
-        $stop;
+
+        // Set reset to 0
+        rst = 0;
+
+        // Send a mult request
+        fu_data.operator = 1'b1;
+        fu_data.operand_a = 32'd10;
+        fu_data.operand_b = 32'd20;
+        mult_valid = 1'b1;
+
+        // Wait for the result
+        #100;
+
+        // Check the result
+        assert(result == 32'd200);
+
+        // Send a div request
+        fu_data.operator = 1'b0;
+        fu_data.operand_a = 32'd10;
+        fu_data.operand_b = 32'd2;
+        mult_valid = 1'b1;
+
+        // Wait for the result
+        #100;
+
+        // Check the result
+        assert(result == 32'd5);
     end
 endmodule
-```

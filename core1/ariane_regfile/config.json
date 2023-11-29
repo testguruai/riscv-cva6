@@ -1,0 +1,1 @@
+{"Config":{"TestGuru":{"language":"systemverilog","mode":"openai","task":"debug","model":"gpt-3.5-turbo","max_tokens":500}}}

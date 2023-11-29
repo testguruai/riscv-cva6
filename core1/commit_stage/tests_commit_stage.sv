@@ -1,6 +1,6 @@
-# VerifAI TestGuru
-# tests for: commit_stage.sv
-```
+// VerifAI TestGuru
+ // tests for: commit_stage.sv
+
 module commit_stage import ariane_pkg::*; #(
     parameter int unsigned NR_COMMIT_PORTS = 2
 )(

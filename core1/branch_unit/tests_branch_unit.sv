@@ -1,6 +1,6 @@
-# VerifAI TestGuru
-# tests for: branch_unit.sv
-```
+// VerifAI TestGuru
+// tests for: branch_unit.sv
+
 module branch_unit_tb;
 
     logic clk;
@@ -19,7 +19,7 @@ module branch_unit_tb;
     logic resolve_branch;
     ariane_pkg::exception_t branch_exception;
 
-    branch_unit dut(
+    branch_unit dut (
         .clk_i(clk),
         .rst_ni(rst),
         .debug_mode_i(debug_mode),
@@ -30,7 +30,6 @@ module branch_unit_tb;
         .branch_valid_i(branch_valid),
         .branch_comp_res_i(branch_comp_res),
         .branch_result_o(branch_result),
-
         .branch_predict_i(branch_predict),
         .resolved_branch_o(resolved_branch),
         .resolve_branch_o(resolve_branch),
@@ -38,45 +37,63 @@ module branch_unit_tb;
     );
 
     initial begin
-        clk = 1'b0;
-        forever #5 clk = ~clk;
-    end
+        always @ (posedge clk) begin
+            clk = ~clk;
+        end
 
-    initial begin
         rst = 1'b1;
-        #10 rst = 1'b0;
+        debug_mode = 1'b0;
+        fu_data = '0;
+        pc = '0;
+        is_compressed_instr = 1'b0;
+        fu_valid = 1'b0;
+        branch_valid = 1'b0;
+        branch_comp_res = 1'b0;
+        branch_result = '0;
 
-        // set up some test data
-        fu_data = '{
-            operator: riscv::JALR,
-            operand_a: 'h00000000,
-            operand_b: 'h00000000,
-            operand_c: 'h00000000
-        };
-        pc = 'h00000000;
+        branch_predict = '{cf: ariane_pkg::NoCF, predict_address: '0};
+        resolved_branch = '{target_address: '0, is_taken: 1'b0, valid: 1'b0, is_mispredict: 1'b0, cf_type: ariane_pkg::NoCF};
+        resolve_branch = 1'b0;
+        branch_exception = '{cause: riscv::INSTR_ADDR_MISALIGNED, valid: 1'b0, tval: '0};
+
+        @(posedge clk) #100;
+        rst = 1'b0;
+
+        @(posedge clk) #100;
+        fu_data = '{operator: ariane_pkg::ADDI, operand_a: '0, operand_b: '0, imm: '0};
+        pc = '0;
         is_compressed_instr = 1'b0;
         fu_valid = 1'b1;
-        branch_valid = 1'b1;
-        branch_comp_res = 1'b1;
-        branch_predict = '{
-            cf: riscv::Branch,
-            predict_address: 'h00000004
-        };
+        branch_valid = 1'b0;
+        branch_comp_res = 1'b0;
+        branch_result = '0;
 
-        #100;
+        @(posedge clk) #100;
+        fu_data = '{operator: ariane_pkg::JALR, operand_a: '0, operand_b: '0, imm: '0};
+        pc = '0;
+        is_compressed_instr = 1'b0;
+        fu_valid = 1'b1;
+        branch_valid = 1'b0;
+        branch_comp_res = 1'b0;
+        branch_result = '0;
 
-        // check results
-        $display("branch_result = %x", branch_result);
-        $display("resolved_branch.target_address = %x", resolved_branch.target_address);
-        $display("resolved_branch.is_taken = %b", resolved_branch.is_taken);
-        $display("resolved_branch.valid = %b", resolved_branch.valid);
-        $display("resolved_branch.is_mispredict = %b", resolved_branch.is_mispredict);
-        $display("resolved_branch.cf_type = %d", resolved_branch.cf_type);
-        $display("branch_exception.cause = %d", branch_exception.cause);
-        $display("branch_exception.valid = %b", branch_exception.valid);
-        $display("branch_exception.tval = %x", branch_exception.tval);
+        @(posedge clk) #100;
+        fu_data = '{operator: ariane_pkg::BEQ, operand_a: '0, operand_b: '0, imm: '0};
+        pc = '0;
+        is_compressed_instr = 1'b0;
+        fu_valid = 1'b1;
+        branch_valid = 1'b0;
+        branch_comp_res = 1'b0;
+        branch_result = '0;
 
-        $finish;
+        @(posedge clk) #100;
+        fu_data = '{operator: ariane_pkg::BNE, operand_a: '0, operand_b: '0, imm: '0};
+        pc = '0;
+        is_compressed_instr = 1'b0;
+        fu_valid = 1'b1;
+        branch_valid = 1'b0;
+        branch_comp_res = 1'b0;
+        branch_result = '0;
     end
+
 endmodule
-```

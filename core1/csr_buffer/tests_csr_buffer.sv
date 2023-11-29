@@ -1,11 +1,11 @@
-# VerifAI TestGuru
-# tests for: csr_buffer.sv
-```
-`include "ariane_pkg.sv"
+
+// VerifAI TestGuru
+// tests for: csr_buffer.sv
 
 module csr_buffer_tb;
 
-    logic clk, rst;
+    logic clk;
+    logic rst_n;
     logic flush;
 
     fu_data_t fu_data;
@@ -17,10 +17,10 @@ module csr_buffer_tb;
     logic [11:0] csr_addr;
 
     csr_buffer #(
-        .CSR_ADDR_WIDTH(12)
+        .XLEN(64)
     ) csr_buffer_i (
         .clk_i(clk),
-        .rst_ni(rst),
+        .rst_ni(rst_n),
         .flush_i(flush),
 
         .fu_data_i(fu_data),
@@ -34,39 +34,48 @@ module csr_buffer_tb;
 
     initial begin
         clk = 0;
-        rst = 1;
+        rst_n = 1;
         flush = 0;
 
         fu_data = '{default: 0};
 
-        csr_ready = 1'b1;
-        csr_valid = 1'b0;
+        csr_ready = 0;
+        csr_valid = 0;
         csr_result = 0;
-        csr_commit = 1'b0;
+        csr_commit = 0;
         csr_addr = 0;
 
         #10;
-        rst = 0;
+        rst_n = 0;
 
         #100;
-        fu_data = '{operand_a: 10, operand_b: 20, csr_op: 'CSRRW, csr_addr: 10};
-        csr_valid = 1'b1;
+        fu_data = '{default: 0, operand_b: 10};
+        csr_valid = 1;
         #10;
-        csr_valid = 1'b0;
+        csr_valid = 0;
         #10;
-        csr_commit = 1'b1;
+        csr_commit = 1;
         #10;
-        csr_commit = 1'b0;
+        csr_commit = 0;
         #10;
-        flush = 1'b1;
+        flush = 1;
         #10;
-        flush = 1'b0;
-
-        #1000;
-        $finish;
+        flush = 0;
+        #10;
+        csr_valid = 1;
+        #10;
+        csr_valid = 0;
+        #10;
+        csr_commit = 1;
+        #10;
+        csr_commit = 0;
+        #10;
+        flush = 1;
+        #10;
+        flush = 0;
+        #10;
     end
 
     always #5 clk = ~clk;
 
 endmodule
-```

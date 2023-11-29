@@ -1,4 +1,2 @@
-# VerifAI TestGuru
-# tests for: compressed_decoder.sv
-```
-```
+// VerifAI TestGuru
+// tests for: compressed_decoder.sv

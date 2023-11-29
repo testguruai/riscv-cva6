@@ -1,27 +1,25 @@
-# VerifAI TestGuru
-# tests for: lsu_bypass.sv
-```
-`include "ariane_pkg.sv"
+// VerifAI TestGuru
+// tests for: lsu_bypass.sv
 
 module lsu_bypass_tb;
 
     logic clk, rst;
     logic flush;
 
-    lsu_ctrl_t lsu_req;
     logic lsu_req_valid;
     logic pop_ld, pop_st;
 
-    lsu_ctrl_t lsu_ctrl_o;
+    logic [13:0] lsu_req_addr;
+    logic [15:0] lsu_req_data;
+    logic [1:0] lsu_ctrl_o;
     logic ready_o;
 
-    // instantiate DUT
     lsu_bypass dut(
         .clk_i(clk),
         .rst_ni(rst),
         .flush_i(flush),
 
-        .lsu_req_i(lsu_req),
+        .lsu_req_i({lsu_req_addr, lsu_req_data}),
         .lsu_req_valid_i(lsu_req_valid),
         .pop_ld_i(pop_ld),
         .pop_st_i(pop_st),
@@ -31,32 +29,36 @@ module lsu_bypass_tb;
     );
 
     initial begin
-        // initialize DUT
         clk = 0;
         rst = 1;
-        #10;
-        rst = 0;
-
-        // generate test stimulus
         forever begin
-            #10;
-            lsu_req_valid = 1;
-            lsu_req.addr = 'h1234;
-            lsu_req.data = 'h5678;
-            #10;
-            lsu_req_valid = 0;
-            #10;
-            pop_ld = 1;
-            #10;
-            pop_ld = 0;
-            #10;
-            flush = 1;
-            #10;
-            flush = 0;
+            #5 clk = ~clk;
         end
     end
 
-    always #5 clk = ~clk;
+    initial begin
+        #10 rst = 0;
+
+        #10 lsu_req_valid = 1;
+        lsu_req_addr = 16'h1234;
+        lsu_req_data = 16'h5678;
+        #10 lsu_req_valid = 0;
+
+        #10 pop_ld = 1;
+        #10 pop_ld = 0;
+
+        #10 lsu_req_valid = 1;
+        lsu_req_addr = 16'h4567;
+        lsu_req_data = 16'h8901;
+        #10 lsu_req_valid = 0;
+
+        #10 pop_st = 1;
+        #10 pop_st = 0;
+
+        #10 flush = 1;
+        #10 flush = 0;
+
+        end
+    end
 
 endmodule
-```

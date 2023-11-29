@@ -1,29 +1,12 @@
-# VerifAI TestGuru
-# tests for: ex_stage.sv
-Sure, here is a test bench and test code for the following verilog code:
-
-```
-// Copyright 2018 ETH Zurich and University of Bologna.
-// Copyright and related rights are licensed under the Solderpad Hardware
-// License, Version 0.51 (the "License"); you may not use this file except in
-// compliance with the License.  You may obtain a copy of the License at
-// http://solderpad.org/licenses/SHL-0.51. Unless required by applicable law
-// or agreed to in writing, software, hardware and materials distributed under
-// this License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-// CONDITIONS OF ANY KIND, either express or implied. See the License for the
-// specific language governing permissions and limitations under the License.
-//
-// Author: Florian Zaruba, ETH Zurich
-// Date: 19.04.2017
-// Description: Instantiation of all functional units residing in the execute stage
-
+// VerifAI TestGuru
+// tests for: ex_stage.sv
 
 module ex_stage import ariane_pkg::*; #(
     parameter int unsigned ASID_WIDTH = 1,
     parameter ariane_pkg::ariane_cfg_t ArianeCfg = ariane_pkg::ArianeDefaultConfig
 ) (
-    input  logic                                   clk_i,    // Clock
-    input  logic                                   rst_ni,   // Asynchronous reset active low
+    input  logic                                   clk_i,                // Clock
+    input  logic                                   rst_ni,               // Asynchronous reset active low
     input  logic                                   flush_i,
     input  logic                                   debug_mode_i,
 
@@ -32,10 +15,10 @@ module ex_stage import ariane_pkg::*; #(
     input  fu_data_t                               fu_data_i,
     input  logic [riscv::VLEN-1:0]                 pc_i,                  // PC of current instruction
     input  logic                                   is_compressed_instr_i, // we need to know if this was a compressed instruction
-                                                                          // in order to calculate the next PC on a mis-predict
+                                                                        // in order to calculate the next PC on a mis-predict
     // Fixed latency unit(s)
     output riscv::xlen_t                           flu_result_o,
-    output logic [TRANS_ID_BITS-1:0]               flu_trans_id_o,        // ID of scoreboard entry at which to write back
+    output logic [TRANS_ID_BITS-1:0]               flu_trans_id_o,
     output exception_t                             flu_exception_o,
     output logic                                   flu_ready_o,           // FLU is ready
     output logic                                   flu_valid_o,           // FLU result is valid
@@ -52,10 +35,10 @@ module ex_stage import ariane_pkg::*; #(
     output logic [11:0]                            csr_addr_o,
     input  logic                                   csr_commit_i,
     // MULT
-    input  logic                                   mult_valid_i,      // Output is valid
+    input  logic                                   mult_valid_i,          // Output is valid
     // LSU
-    output logic                                   lsu_ready_o,        // FU is ready
-    input  logic                                   lsu_valid_i,        // Input is valid
+    output logic                                   lsu_ready_o,           // FU is ready
+    input  logic                                   lsu_valid_i,           // Input is valid
 
     output logic                                   load_valid_o,
     output riscv::xlen_t                           load_result_o,
@@ -67,3 +50,17 @@ module ex_stage import ariane_pkg::*; #(
     output exception_t                             store_exception_o,
 
     input  logic                                   lsu_commit_i,
+    output logic                                   lsu_commit_ready_o,    // commit queue is ready to accept another commit request
+    input  logic [TRANS_ID_BITS-1:0]               commit_tran_id_i,
+    output logic                                   no_st_pending_o,
+    input  logic                                   amo_valid_commit_i,
+    output amo_req_t                               amo_req_o,             // request to cache subsytem
+    input  amo_resp_t                              amo_resp_i,            // response from cache subsystem
+    // Performance counters
+    output logic                                   itlb_miss_o,
+    output logic                                   dtlb_miss_o,
+    // PMPs
+    input  riscv::pmpcfg_t [15:0]                  pmpcfg_i,
+    input  logic[15:0][riscv::PLEN-3:0]            pmpaddr_i,
+    ...
+)
