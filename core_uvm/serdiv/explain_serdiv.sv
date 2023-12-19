@@ -1,0 +1,9 @@
+# VerifAI TestGuru
+# Explanation for: serdiv.sv
+This is a Verilog code for a simple 64-bit serial divider. The module "serdiv" takes in two operands (op_a_i and op_b_i) and an opcode_i (which indicates the type of operation to perform - division or modulus). The output of the module is the result of the operation (res_o).
+
+The datapath of the module aligns the input operands for faster division. The module has two states - DIVIDE and FINISH. In the DIVIDE state, the module performs the actual division operation by using a main comparator and a main adder. During each cycle, the comparator compares the magnitudes of the two operands and the adder subtracts the divisor (op_b_i) from the dividend (op_a_i) if the divisor is less than or equal to the dividend. The division operation continues until the counter (cnt_q) becomes zero. If the result of the division operation is zero, then the state transitions to the FINISH state. In the FINISH state, the output result is computed by selecting either the input dividend or the remainder based on the opcode_i value.
+
+The module also includes registers and flags to store the state, operands, and the result of the operation, as well as to keep track of special conditions such as if the divisor is zero or if the result of the division is zero. The signal in_rdy_o indicates whether the input operands are ready to be processed and the signal out_vld_o indicates whether the output result is valid. 
+
+The module includes comments throughout the code to provide information on the purpose of each signal and block of code. It also includes licensing terms and the names of the authors.
