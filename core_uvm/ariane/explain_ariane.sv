@@ -1,3 +1,0 @@
-# VerifAI TestGuru
-# explain for: ariane.sv
-The Ariane top-level module instantiates the CVA6 core and the CVXIF coprocessor. The CVA6 core is the main processing unit of the Ariane processor. It implements the RISC-V instruction set architecture and provides a number of peripherals, such as a timer, an interrupt controller, and a debug interface. The CVXIF coprocessor is an optional coprocessor that can be used to implement custom instructions.

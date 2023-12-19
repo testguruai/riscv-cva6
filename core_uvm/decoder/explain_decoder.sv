@@ -1,3 +1,0 @@
-# VerifAI TestGuru
-# explain for: decoder.sv
-The code you provided is a Verilog module that implements the decoder for the RISC-V instruction set. The decoder takes in the instruction as an input and outputs the decoded instruction, along with a number of flags that indicate whether the instruction is a control-flow instruction, an illegal instruction, or an exception. The decoder also implements the forwarding logic for the instruction operands.
